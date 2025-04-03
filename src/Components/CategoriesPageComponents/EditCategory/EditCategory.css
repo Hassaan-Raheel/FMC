@@ -1,0 +1,303 @@
+.action-bar-main-section{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.action-select{
+    position: absolute;
+    top: 5px;
+    left: -90px;
+    width: 180px;
+    background-color: #ffff;
+    /* height: 160px; */
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 12px;
+    box-sizing: border-box;
+    z-index: 999999;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.action-select.show-action{
+    display: flex;
+}
+
+.action-single-action-spacify{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.action-single-action-spacify img{
+    width: auto;
+    height: 18px;
+    object-fit: contain;
+}
+
+.action-single-action-spacify p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+/* Quick Edit modal */
+.quick-edit-modal-main-div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #ffff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.quick-edit-modal-main-div.show-quick-edit-modal{
+    /* display: flex; */
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.quick-view-inner-section{
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    /* height: 350px; */
+    height: auto;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    position: relative;
+}
+
+.quick-edit-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #FDFDFD;
+    box-shadow: 0px 1px 4px 0px #00000026;
+    border: 1px solid var(--border-color);
+}
+
+.quick-edit-head h3{
+    margin: 0;
+    color: var(--text-color);
+}
+
+.quick-edit-close-btn{
+    /* position: absolute; */
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quick-edit-close-btn img{
+    width: auto;
+    height: 20px;
+    object-fit: contain;
+}
+
+.quick-edit-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    gap: 30px;
+
+}
+
+.quick-input-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.quick-edit-title-and-input{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quick-edit-title-and-input p{
+    margin: 0;
+    color: var(--text-color);
+    width: 30%;
+    font-size: var(--font-12);
+    font-weight: var(--font-wight-regular);
+    line-height: var(--line-height-18);
+}
+
+.quick-edit-title-and-input input{
+    width: 70%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: var(--font-12);
+    line-height: var(--line-height-18);
+    font-weight: var(--font-weight-regular);
+    outline: none;
+    color: var(--text-color);
+}
+
+.quick-edit-title-and-input input::placeholder{
+    color: var(--text-color);
+}
+
+.quick-view-select{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 2px;
+}
+
+.quick-view-select-click{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.quick-view-select-click p{
+    margin: 0;
+    font-size: var(--font-12) !important;
+    line-height: var(--line-height-18);
+    font-weight: var(--font-weight-regular);
+    color: var(--text-color) !important;
+}
+
+.quick-view-select-click-dropdown{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 0;
+    background-color: #fff;
+    padding: 0 5px;
+    /* border: 1px solid var(--border-color); */
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.quick-view-select-click-dropdown.show-quick-view-select-click-dropdown{
+    height: 164px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+
+}
+
+.quick-view-dropdown-inner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    
+}
+
+/* Scrollbar styles */
+.quick-view-dropdown-inner::-webkit-scrollbar {
+    width: 3px; /* Thin scrollbar */
+    height: 5px !important;
+    background-color: #F0F0F0; /* Background color */
+}
+
+.quick-view-dropdown-inner::-webkit-scrollbar-thumb {
+    background-color: #595959; /* Scrollbar color */
+    border-radius: 3px; /* Rounded corners for the scrollbar */
+}
+
+/* Hide the scrollbar arrows */
+.quick-view-dropdown-inner::-webkit-scrollbar-button {
+    display: none; /* Hide top and bottom arrows */
+}
+
+.quick-view-dropdown-inner p{
+    padding: 10px;
+    background-color: transparent;
+    width: 100%;
+    font-size: var(--font-12);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-18);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 0; 
+}
+
+.quick-view-dropdown-inner p:hover{
+    /* background: linear-gradient(to right, #4487C5, white); */
+    background: linear-gradient(90deg, #4487C5 0%, rgba(68, 135, 197, 0.2) 100%);
+
+    color: #fff;
+}
+
+.quick-edit-button{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: end;
+}
+
+.quick-edit-button button{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: var(--font-wight-medium);
+    border-radius: 3px;
+    cursor: pointer;
+}

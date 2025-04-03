@@ -1,0 +1,16 @@
+.add-button-style {
+    font-size: var(--font-15) !important;
+    line-height: var(--line-height-22) !important;
+    font-weight: var(--font-weight-semi-bold) !important;
+    color: #4487C5 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background-color: transparent !important;
+    padding: 5px 15px !important;
+    border: 1px solid #4487C5 !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    width: max-content !important;
+}

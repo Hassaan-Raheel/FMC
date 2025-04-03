@@ -1,0 +1,1263 @@
+  
+  /* Loader CSS */
+  .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 60px; /* Slightly larger size for better visibility */
+      height: 60px; /* Slightly larger size for better visibility */
+      animation: spin 1.5s linear infinite; /* Faster rotation for more dynamic feel */
+      position: absolute; /* Center it absolutely */
+      top: 45%;
+      left: 55%;
+      transform: translate(-50%, -50%); /* Ensure it's perfectly centered */
+  }
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light gray background */
+    border-top: 4px solid #3498db; /* Blue color for the spinning part */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+  
+  /* Keyframes for Spinner Animation */
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+  
+  /* Apply a Professional Font */
+  body {
+      font-family: 'Poppins', sans-serif; /* More modern and elegant */
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* Dark background for contrast */
+  }
+  
+
+.total-details
+{
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  height: 200px; /* Set a fixed height for uniformity */
+  padding: 0px 0px;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #595959;;
+  margin-top: 20px;
+}
+
+.total-details .text-lg {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.mb-2 {
+  margin-bottom: 10px;
+}
+
+.p-4 {
+  padding: 20px 0px;
+  margin-top: 20px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-300 {
+  border-color: #e0e0e0;
+}
+
+.rounded-md {
+  border-radius: 8px;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Grid container */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: Single column */
+  gap: 16px;
+  padding: 16px;
+}
+.grid23 {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: Single column */
+  gap: 16px;
+  padding: 0px;
+}
+
+/* Responsive: Two columns for larger screens */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid23 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Card Styles */
+.hoverline1 {
+  position: relative;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Hover Effect: Top Bar */
+.hoverline1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(73, 218, 0);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hoverline1:hover::before {
+  transform: scaleX(1);
+}
+.hoverline2 {
+  position: relative;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Hover Effect: Top Bar */
+.hoverline2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(218, 0, 0);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hoverline2:hover::before {
+  transform: scaleX(1);
+}
+
+
+.gridpie {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* Increased gap between cards */
+  padding: 0 0rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background:rgba(255, 255, 255, 0.7); 
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #595959;;
+}
+@media (min-width: 768px) {
+.gridpie {
+       margin-top: 25px;
+      grid-template-columns: repeat(3, 3fr);
+  }
+}
+
+
+.chart-container canvas {
+  filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Inner Grid */
+.grid5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  
+}
+
+/* Grid Items */
+.grid10 {
+  text-align: left;
+}
+
+.grid10 p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.grid10 strong {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem; /* Increased gap between cards */
+  padding: 1rem;
+
+
+}
+
+.grid6 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0rem; /* Increased gap between cards */
+  padding: 0.5rem 0rem 0.5rem 2rem;
+  gap: 0.5rem; /* Increased gap between cards */
+  margin: 0px;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  border-radius: 60px 0px 0px 60px; /* Smooth corners */
+  box-sizing: border-box;
+  color: #595959;;
+  font-size: 15px;
+  justify-content: center;
+  text-align:  center;
+}
+.space {
+  margin-left: 50px;
+  margin-right: -180px;
+  margin-top: 110px;
+  box-shadow: 0 1px 4px #00000029;
+  clip-path: polygon(0% 0%, 83% 0%, 100% 100%, 0% 100%);
+  box-sizing: border-box;
+  color: #595959;
+  font-size: 15px;
+  text-align: center;
+  overflow: hidden; /* Ensures content follows the shape */
+  padding: 0px 0px 0px 0px;
+  width:620px;
+}
+
+.grid7
+{
+  display: grid;
+  grid-template-columns: 1fr;/* Increased gap between cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem 2.8rem;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #595959;;
+  width:100%;
+}
+
+@media (min-width: 768px) {
+  .grid7 {
+      grid-template-columns: repeat(2, 3fr);
+      margin-top: 27px;
+  }
+}
+
+.color1{
+  color: white;
+
+  background-color: #E53935 !important;
+}
+.color2{
+  color: white;
+
+  background-color: #1E88E5 !important;
+}
+.color3{
+  color: white;
+
+  background-color: #1976D2 !important;
+}
+
+.grid5 {
+  display: grid;
+  gap: 2rem; /* Increased gap between cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+padding: 10px;
+
+}
+
+
+.grid5 p {
+ font-size: 20px;
+padding: 0px 00px 0px 0px;
+}
+.grid5 strong {
+  font-size: 25px;
+ }
+
+.gridmain {
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+.gridmain{
+       margin-top: 20px;
+      grid-template-columns: repeat(2, 3fr);
+      margin: 0px 0px 0px 0px;
+      gap:1rem;
+     
+  }
+}
+
+.grid10 {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* Increased gap between cards */
+  padding: 0 1rem;
+  color: #3b3b3b;;
+}
+
+@media (min-width: 768px) {
+.grid10{
+       margin-top:5px;
+      grid-template-columns: repeat(1, 3fr);
+  }
+}
+
+.grid1 {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* Increased gap between cards */
+  padding: 0 0rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background:rgba(255, 255, 255, 0.7); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #3b3b3b;;
+}
+@media (min-width: 768px) {
+.grid1{
+       margin-top:5px;
+      grid-template-columns: repeat(1, 3fr);
+  }
+}
+
+.gridupload {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* Increased gap between cards */
+  padding: 0 0rem;
+
+}
+@media (min-width: 768px) {
+.gridupload{
+      margin-top: -10px;
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.grid22 {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0rem; /* Increased gap between cards */
+  padding: 0 0rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0rem 1.5rem 2rem 1.5rem;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background:rgba(255, 255, 255, 0.7); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #3b3b3b;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+.grid1{
+       margin-top:5px;
+      grid-template-columns: repeat(1, 3fr);
+  }
+}
+
+.grid2 p {
+  gap: 1rem; /* Increased gap between cards */
+  padding: 1rem;
+  margin: 0px;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  color: #595959;;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.grid2 strong {
+  font-size: 25px;
+}
+.total .total-details h3 {
+margin: 0px 0px 0px 10px;
+}
+.grid22 h3 {
+  margin: 20px 0px 10px 0px;
+  color: rgb(89,89,89);
+
+  }
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .grid {
+      grid-template-columns: repeat(2, 3fr);
+  }
+}
+@media (min-width: 768px) {
+  .grid23 {
+      grid-template-columns: repeat(2, 3fr);
+  }
+}
+
+
+
+.gridcamp {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem; /* Increased gap between cards */
+  padding: 1rem;
+
+
+}
+
+.gridcamp p {
+  gap: 1rem; /* Increased gap between cards */
+  padding: 1rem;
+  margin: 0px;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  color: #595959;;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.gridcamp strong {
+  font-size: 25px;
+}
+
+.grid3 {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* Increased gap between cards */
+  padding: 0 0rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background:rgba(255, 255, 255, 0.7); 
+  border-radius: var(--standered-radius); /* Smooth corners */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #595959;;
+}
+@media (min-width: 768px) {
+.grid3{
+       margin-top: 25px;
+      grid-template-columns: repeat(4, 3fr);
+  }
+}
+
+
+
+
+  /* Card Styling */
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    height: 580px; /* Set a fixed height for uniformity */
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #595959;;
+  }
+  .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  
+  /* Text Styling */
+  .card p {
+    color: #595959;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: justify;
+    max-height: 90px; /* Limit height but allow scrolling */
+    padding-right: 8px; /* Prevent text from touching the edge */
+  }
+  .card p::-webkit-scrollbar {
+    width: 6px;
+  }
+  .card p::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+  }
+  .card a {
+    color: #595959;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .card a:hover {
+      text-decoration: underline;
+  }
+  .card .ad-title
+  {
+    padding: 5x 0px ;
+    margin: 0;
+    text-align: left;
+  }
+  .card .campaign-name 
+  {
+    padding:5px 0;
+    margin: 0;
+    
+  }
+  .card .campaign-status
+  {
+    padding:5px 0px;
+    margin: 0;
+    
+  }
+  .card .campaign-status1
+  {
+    padding:0px 10px 5px 0px;
+    margin: 0;
+    
+  }
+
+
+  /* Card Styling */
+  .card2 {
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    height: 420px; /* Set a fixed height for uniformity */
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #595959;;
+  }
+  .card2-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card2:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  
+  /* Text Styling */
+  .card2 p {
+    color: #595959;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: justify;
+    max-height: 90px; /* Limit height but allow scrolling */
+    padding-right: 8px; /* Prevent text from touching the edge */
+  }
+  .card2 p::-webkit-scrollbar {
+    width: 6px;
+  }
+  .card2 p::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+  }
+  .card2 a {
+    color: #595959;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .card2 a:hover {
+      text-decoration: underline;
+  }
+  .card2 .ad-title
+  {
+    padding: 5x 0px ;
+    margin: 0;
+    text-align: left;
+  }
+  .card2 .campaign-name 
+  {
+    padding:5px 0;
+    margin: 0;
+    
+  }
+  .card2 .campaign-status
+  {
+    padding:5px 0px;
+    margin: 0;
+    
+  }
+  .card2 .campaign-status1
+  {
+    padding:0px 10px 5px 0px;
+    margin: 0;
+    
+  }
+
+
+
+  /* Card Container Grid Layout */
+  .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem; /* Increased gap between cards */
+      padding: 0 0rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+      -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+      backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+      background: var(--second-layer-bg); /* Your custom transparent background */
+      border-radius: var(--standered-radius); /* Smooth corners */
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #595959;;
+  }
+
+  .grid23 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem; /* Increased gap between cards */
+  
+}
+
+  
+
+
+  /* Responsive Design */
+  @media (min-width: 768px) {
+      .grid {
+          grid-template-columns: repeat(2, 3fr);
+          margin-top: 27px;
+      }
+  }
+  @media (min-width: 768px) {
+    .grid23 {
+        grid-template-columns: repeat(2, 3fr);
+        margin-top: 0px;
+    }
+}
+
+  
+
+
+.Revenue h3
+{
+  margin: 0px 0px 0px 0px;
+}  
+
+.Amount h3
+{
+  margin: 0px 0px 0px 0px;
+}  
+  .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+  }
+  
+  /* Insights container styling */
+  .card .insights {
+      margin-top: 0rem;
+  }
+  
+  /* Insights label styling */
+  .card .insights p {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    
+  }
+  
+  /* Grid layout for insights */
+  .card .insights .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+  }
+
+  .card .insights .grid23 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+  
+  /* Individual insight box */
+  .card .insights .box {
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fafafa;
+  }
+  
+  /* Insight title in the box */
+  .card .insights .box .label {
+      font-size: 150px;
+      font-weight: 600;
+      color: #595959;;
+      margin-bottom: 0.25rem;
+  }
+  
+  
+  /* Insight value in the box */
+  .card .insights .box .value {
+      font-size: 20px;
+      color: #666;
+      margin: 0px;
+  }
+  
+  /* Special box for video views */
+  .card .insights .video-box {
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fafafa;
+      color: black;
+  }
+  
+  .card .insights .label{
+      color: black;
+  }
+  
+  .card .insights .value{
+      color: rgb(48, 48, 48);
+  }
+  
+  /* Styling the "No insights available" message */
+  .card .insights .no-insights {
+      font-size: 0.875rem;
+      color: #595959;
+  }
+  .card .insights {
+    max-height: 500px; /* Adjust height as needed */
+    padding-right: 10px; /* Add some space for scrollbar */
+    padding: 0;
+  }
+  
+  /* Scrollbar Styling */
+  .card .insights::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .card .insights::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+  }
+
+  .card2 h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Insights container styling */
+.card2 .insights {
+    margin-top: 0rem;
+}
+
+/* Insights label styling */
+.card2 .insights p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  
+}
+
+/* Grid layout for insights */
+.card2 .insights .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card2 .insights .grid23 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Individual insight box */
+.card2 .insights .box {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+}
+
+/* Insight title in the box */
+.card2 .insights .box .label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #595959;;
+    margin-bottom: 0.25rem;
+}
+
+
+/* Insight value in the box */
+.card2 .insights .box .value {
+    font-size: 15px;
+    color: #666;
+    margin: 0px;
+}
+
+/* Special box for video views */
+.card2 .insights .video-box {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+    color: black;
+}
+
+.card2 .insights .label{
+    color: black;
+}
+
+.card2 .insights .value{
+    color: rgb(48, 48, 48);
+}
+
+/* Styling the "No insights available" message */
+.card2 .insights .no-insights {
+    font-size: 0.875rem;
+    color: #595959;
+}
+.card2 .insights {
+  max-height: 500px; /* Adjust height as needed */
+  padding-right: 10px; /* Add some space for scrollbar */
+  padding: 0;
+}
+
+/* Scrollbar Styling */
+.card2 .insights::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card2 .insights::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+}
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .text-section {
+    flex: 1;
+  }
+
+  
+  .icon-container {
+    font-size: 25px;
+    color: #3498db; /* Neutral gray for icons */
+  }
+  
+  .icon-container i {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .icon-container i:hover {
+    color: #3182ce; /* Blue on hover */
+  }
+  
+  
+  .dates {
+    display: flex;
+    justify-content:flex-start;
+    padding: 20px px; /* This will provide space between the dates */
+  }
+  
+  .dates p {
+    /*font-size: 0.875rem; /* Corresponds to text-xs in Tailwind */
+    font-weight: 500; /* Font-medium */
+  }
+
+/* All Filter Button */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #ccc;
+  color:#ffffff;
+}
+
+/* Filter Dropdown Section */
+
+.ant-collapse-header {
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  color: #595959;
+}
+.ant-collapse-content-box
+{
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  color: #595959;
+}
+
+
+.filter-dropdown.accordion-open {
+  max-height: 500px; /* Adjust this value as per your content height */
+}
+
+.filter-dropdown.accordion-closed {
+  max-height: 0; /* Ensure no height when closed */
+}
+
+/* Each filter item */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if they overflow */
+  gap: 16px; /* Adds spacing between filter items */
+  align-items: center; /* Aligns items vertically */
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px; /* Ensures fields are not too small */
+}
+
+.filter-item label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.filter-item input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.filter-item input[type="date"] {
+  cursor: pointer;
+}
+
+/* Flexbox settings for responsiveness */
+@media (max-width: 768px) {
+  .filter-dropdown {
+    flex-direction: column; /* Stack filters vertically on smaller screens */
+    gap: 10px;
+  }
+
+  .filter-item {
+    flex: 1 1 100%; /* Make each filter take up the full width on mobile */
+  }
+}
+
+.filter-item input[type="date"]{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+  width: 160px;
+  margin:0;
+  min-width: 50px;
+}
+.Camp-name select
+{
+  width:160px;
+}
+
+.Camp-id select
+{
+  width:160px;
+}
+
+
+.E-date{
+  width:10px;
+}
+
+/* General Table Styles */
+
+/* Basic styling for the tab container */
+.tab-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.tab-container1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 0px;
+}
+
+/* Styling for the TabList (tab navigation) */
+.tab-list {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  border: 0px;
+  margin:0px;
+  text-decoration: none;
+}
+.tab-list li{
+  text-decoration: none;
+  list-style-type:none ;
+  border-radius: 5px 5px;
+  margin-right: 20px;
+}
+.tab-list{
+ margin-bottom: 10px;
+ padding: 0px;
+}
+.tab {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+   box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+  color: #595959;
+}
+
+.tab:hover {
+  background-color: #ffffff;
+}
+
+.tab--selected {
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+}
+
+/* Tab Panel (Content) styling */
+
+.chart-container {
+  margin-bottom: 20px;
+}
+
+.chart-container h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.chart-container .recharts-wrapper {
+  margin-top: 10px;
+}
+
+/* For better responsiveness */
+@media (max-width: 768px) {
+  .tab-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tab {
+    margin-bottom: 10px;
+  }
+
+  .tab-container {
+    padding: 10px;
+  }
+
+  .chart-container {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling if the table is wider than the container */
+  -webkit-overflow-scrolling: touch; /* For better scrolling on mobile devices */
+  margin-top: 20px;
+  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+  background: var(--second-layer-bg); /* Your custom transparent background */
+  border-radius: var(--standered-radius); /* Smooth corners */
+}
+
+table {
+  width: 100%; /* Ensures table takes up full available width */
+  border-collapse: collapse; /* For better border styling */
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  white-space: nowrap;
+}
+
+/* Body Styling */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+/* Alternating Row Background */
+/* Hover Effect */
+tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: 0.2s;
+}
+
+/* Center Align Numeric Columns */
+td.text-center {
+  text-align: center;
+}
+
+/* Icon Styling */
+td i {
+  margin-left: 5px;
+  color: #3498db; /* Dark Gray */
+  font-size: 14px;
+}
+
+/* Responsive Table for Small Screens */
+@media (max-width: 768px) {
+  th, td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.margin-bottom
+{
+  margin-bottom: 20px;
+}

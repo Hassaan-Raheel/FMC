@@ -1,0 +1,125 @@
+.small-slider-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    background: #FFFFFF;
+    padding: 20px 25px 10px 25px;
+    gap: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.small-slider-inner-container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.small-slider-inner-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.slider-single-image-container{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slider-upload-image-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    width: max-content;
+    height: max-content;
+    border: 1px dashed #595959;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slider-single-image-container > img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.slider-single-image-container > button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 3px;
+    border-radius: 50%;
+
+}
+
+.mobile-slider-add-and-dots{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 35px;
+}
+
+.mobile-slider-dots-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-dot.active {
+    background-color: #333;
+}
+
+
+
+/* .mobile-slider-add-and-dots > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 100%;
+    background-color: transparent;
+    border: 1px dashed #595959;
+    border-radius: 25px;
+    cursor: pointer;
+} */

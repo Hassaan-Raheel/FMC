@@ -1,0 +1,245 @@
+.best-seller-category{
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 30px 20px 30px;
+    background-color: #FFFFFF;
+}
+
+.best-seller-category-select-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    align-items: start;
+    justify-content: start;
+}
+
+.best-seller-inner-section{
+    display: flex;
+    flex-direction: column;
+    /* width: 480px; */
+    width: 45%;
+    height: auto;
+    gap: 10px;
+}
+
+.best-seller-dropdown-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.best-seller-dropdown-head-and-delete-button{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+.best-seller-drop-down-head{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #F0F0F0;
+    background-color: #FDFDFD;
+    /* box-shadow: 0px 1px 4px 0px #00000026; */
+    box-shadow: 0px 1px 4px 0px #00000026;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.best-seller-drop-down-head p{
+    margin: 0;
+    font-weight: 600;
+    line-height: 22px;
+    font-size: 15px;
+    color: #595959;
+}
+
+.drop-down-delete-btn{
+    width: max-content;
+    height: max-content;
+    padding: 2px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.best-seller-dropdown-body{
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #F0F0F0;
+    background-color: #FFFFFF;
+    padding: 0 20px;
+    /* box-shadow: 0px 1px 4px 0px #00000026; */
+    width: 90%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+}
+
+.best-seller-dropdown-body.show-category{
+    height: auto;
+    padding: 20px;
+}
+
+.best-seller-dropdown-containt{
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+}
+
+.best-seller-category-image-upload-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 1px dashed #595959;
+    height: max-content;
+    border-radius: 5px;
+}
+
+.best-seller-product-main-image-container{
+    display: flex;
+    width: 120px;
+    height: 100%;
+    position: relative;
+}
+
+.best-seller-img-delete-btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.best-seller-img-delete-btn img{
+    width: 15px;
+    height: auto;
+    object-fit: contain;
+}
+
+.best-seller-selected-image{
+    width: 120px;
+    height: 100px;
+
+}
+
+.best-seller-dropdown-inputs-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.best-seller-category-title-input{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.best-seller-category-btn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.best-seller-category-btn button{
+    padding: 5px 15px;
+    border: 1px dashed #595959;
+    color: #595959;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.best-seller-product-main-banner-container{
+    width: max-content;
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.best-seller-banner-delete-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.best-seller-banner-delete-btn img{
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+}
+
+.best-seller-cover-image-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    flex-grow: 1;
+    /* padding: 10px; */
+}
+
+.best-seller-cover-image-upload-icon-div{
+    padding: 30px;
+    border: 2px dashed #595959;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-seller-cover-image{
+    width: 100%;
+    max-width: 380px;
+    height: 320px;
+    /* object-fit: contain; */
+    border-radius: 5px;
+}

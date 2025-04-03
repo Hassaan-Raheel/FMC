@@ -1,0 +1,196 @@
+.MonthlyPlanner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.Monthly-Scroll-Container {
+    width: 100%;
+    padding: 5px;
+    max-width: 1130px;
+    max-height: 515px;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: var(--secondry-radius);
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+.Monthly-Scroll-Container::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+    background-color: #F0F0F0;
+}
+
+.Monthly-Scroll-Container::-webkit-scrollbar-thumb {
+    background-color: #595959 !important;
+    border-radius: 3px !important;
+}
+
+.Monthly-Scroll-Container::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.Monthly-Scroll-Container::-webkit-scrollbar-button {
+    display: none;
+}
+
+.MonthlyGrid {
+    display: grid;
+    grid-template-columns: 100px repeat(31, 1fr);
+    grid-template-rows: 50px repeat(12, 1fr);
+    border-collapse: collapse;
+    width: max-content;
+    gap: 5px;
+    align-items: start;
+    text-align: center;
+    border: var(--standred-border);
+}
+
+.empty-cell {
+    background: transparent;
+}
+
+.Monthly-Day-Header {
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-large);
+    color: var(--text-color-1);
+    padding: 5px;
+    background-color: white;
+    border: var(--standred-border);
+    border-radius: var(--secondry-radius);
+    box-shadow: var(--box-shadow-regular-1);
+    width: 175px;
+    margin-top: 5px;
+}
+
+.date-style {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-extra-small);
+    vertical-align: super;
+    margin-left: 5px;
+}
+
+.Monthly-Hour-Label {
+    background-color: var(--third-layer-bg);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-small);
+    box-shadow: var(--box-shadow-regular-1);
+    text-align: center;
+    padding: 10px;
+    border: var(--standered-border);
+    border-radius: var(--secondry-radius);
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Monthly-Appointment-Slot {
+    min-height: 80px;
+    border: 1px solid #ccc;
+    position: relative;
+    width: 175px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 3px;
+}
+
+.Monthly-Slot-Divider {
+    border-top: 1px dashed #ccc;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+.Monthly-Appointment {
+    background-color: #F3F4F6;
+    border-left: 5px solid var(--active-element-color);
+    width: 158px;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow-regular-1);
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Monthly-Appointment-Content {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0;
+}
+
+.Monthly-Content-Row01 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.MonthCustomer-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: var(--standred-border);
+    box-shadow: var(--box-shadow-regular-1);
+}
+
+.MonthlyContent-Row01-Description {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: var(--text-color-1);
+    margin-left: 10px;
+    font-size: var(--font-12);
+}
+
+.MonthlyAppointment-catDetails span {
+    text-align: left;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-color-1);
+    margin-left: 5px;
+}
+
+.Timing-Issue {
+    color: red;
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-medium);
+}
+
+.Monthly-Appointment-Carousel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+.Monthly-Appointment:hover {
+    transform: scale(1.05);
+}
+
+.Monthly-Appointment-Stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+}
+

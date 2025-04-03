@@ -1,0 +1,28 @@
+.dataTable thead th {
+    height: 52px;
+    border-radius: 5px 5px 0px 0px;
+    background: #FDFDFD;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-color);
+    border: none;
+}
+
+.dataTable tbody td {
+    height: 66px;
+    text-align: center;
+    background: #FFFFFF;
+    border-top: 1px solid #F0F0F0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #858585;
+}
+
+.dataTable .action-btn {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}

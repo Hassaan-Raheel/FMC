@@ -1,0 +1,211 @@
+.top-categories-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--secondry-radius);
+    background: var(--second-layer-bg); /* Semi-transparent background color */
+    backdrop-filter: var(--standered-backdrop);
+    box-shadow: var(--box-shadow-regular-1);
+    border: var(--standered-border);
+    padding: 10px;
+    gap: 10px;
+}
+
+.top-categories-inner-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.75);
+    border: var(--standered-border);
+    padding: 10px;
+    gap: 10px;
+}
+
+.top-categories-head{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-categories-head p{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #595959;
+}
+
+.month-drop-down-and-menu-dots{
+    display: flex;
+    width: auto;
+    gap: 10px;
+}
+
+.menu-dots {
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.top-categories-month-drop-down{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #FDFDFD;
+    position: relative;
+}
+
+/* .drop-down-months-container{
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 120px;
+    padding: 5px;
+    background-color: #FDFDFD;
+    border: 1px solid var(--border-color);
+} */
+
+.drop-down-months-container p{
+    margin: 0;
+    padding: 0;
+}
+
+.top-category-month-drop-down-toggler{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.top-category-month-drop-down-toggler p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #595959;
+    margin: 0;
+    padding: 0;
+}
+.top-category-month-drop-down-toggler img {
+    width: 15px;
+    height: auto;
+    object-fit: contain;
+}
+
+.top-category-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.top-category-single-data{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+    justify-content: start;
+}
+
+.top-category-product-image{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.top-category-product-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.top-category-product-name-and-value{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.top-category-product-name-and-value h3{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #595959;
+    margin: 0;
+    padding: 0;
+}
+
+.top-categories-values{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: max-content;
+    box-sizing: border-box;
+}
+
+.top-categories-values p{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.top-categories-values span{
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: rgba(68, 87, 197, 0.1);
+    color: #4457C5;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+.top-category-product-progress{
+    width: 100%; /* Adjust width as needed */
+  height: 10px; /* Adjust height as needed */
+  border: 1px solid #F0F0F0;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure rounded corners work */
+  appearance: none;
+}
+
+.top-category-product-progress::-webkit-progress-bar {
+  background-color: #fff; /* Remaining part */
+  border-radius: 10px; /* Match the border radius */
+}
+
+.top-category-product-progress::-webkit-progress-value {
+  background-color: #4457C5; /* Filled color */
+  border-radius: 10px; /* Rounded corners for the filled part */
+}
+
+.top-category-product-progress::-moz-progress-bar {
+  background-color: #4457C5; /* Filled color for Firefox */
+  border-radius: 10px; /* Rounded corners for the filled part */
+}

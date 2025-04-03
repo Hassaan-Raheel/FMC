@@ -1,0 +1,169 @@
+.ravenue-chart-main-container{
+    display: flex;
+    width: 100% !important;
+    flex-direction: column;
+    border-radius: var(--secondry-radius);
+    background: var(--second-layer-bg); /* Semi-transparent background color */
+    backdrop-filter: var(--standered-backdrop);
+    box-shadow: var(--box-shadow-regular-1);
+    border: var(--standered-border);
+    padding: 10px;
+}
+
+.ravenue-chart-header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ravenue-chart-headings{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 5px;
+}
+
+.ravenue-chart-headings h2{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #595959;
+}
+
+.ravenue-chart-headings p {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #595959;
+}
+
+.ravenue-chart-inner-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+}
+
+.revenue-chart-head{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.revenue-chart-head-details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.revenue-chart-head-details p{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #757575;
+}
+
+.revenue-chart-head-details h3{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #757575;
+}
+
+.revenue-chart-head-export-options{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: max-content;
+}
+
+.days-data{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    background-color: #D7D7D7;
+    border: 1px solid #D9D9D9;
+    padding: 2px 3px;
+    border-radius: 25px;
+    border: 1px solid #D9D9D9;
+}
+
+.days-data-btn{
+    width: max-content;
+    height: 100%;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: rgba(89, 89, 89, 0.6);
+    cursor: pointer;
+}
+
+
+.days-data-btn:nth-child(1){
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.days-data-btn:nth-child(5){
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.days-data-btn.active-day-select{
+    background-color: #ffffff;
+    border-radius: 19px;
+    border: 1px solid #D9D9D9;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #757575;
+
+}
+
+.export-btn{
+    width: max-content;
+    height: 100%;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: #D7D7D7;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: rgba(89, 89, 89, 0.6);
+    cursor: pointer;
+    border-radius: 25px;
+    gap: 10px;
+    border: 1px solid #D9D9D9;
+}
+
+
+
+#chart{
+    width: 100%;
+}
+
+.apexcharts-toolbar{
+    display: none !important;
+}
+
+.apexcharts-toolbar{
+    display: none !important; 
+}

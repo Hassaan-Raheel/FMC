@@ -1,0 +1,106 @@
+.sales-performance-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--secondry-radius);
+    background: var(--second-layer-bg); /* Semi-transparent background color */
+    backdrop-filter: var(--standered-backdrop);
+    box-shadow: var(--box-shadow-regular-1);
+    border: var(--standered-border);
+    padding: 10px;
+    gap: 10px;
+}
+
+.sales-performance-inner-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--secondry-radius);
+    background: rgba(255, 255, 255, 0.75);
+    border: var(--standered-border);
+    padding: 10px;
+    gap: 10px;
+}
+
+.sales-performance-head-head{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sales-performance-head-head p{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #595959;
+}
+
+.sales-performance-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.radial-chart-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: max-content;
+  height: max-content;
+}
+
+.inner-lined-chart{
+    position: absolute;
+    box-sizing: border-box;
+    width: 265px; /* Adjust the size as needed */
+    height: 265px;
+    border-radius: 50%;
+    z-index: 10; /* Ensure it appears above the chart */
+}
+
+.sale-performance-under-line{
+    width: 80%;
+    border: 1px solid var(--border-color);
+    /* height: 1px; */
+}
+
+.sale-performance-comments-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.sale-performance-comments-container h3{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #000;
+}
+
+.sale-performance-comments-container p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #595959;
+}

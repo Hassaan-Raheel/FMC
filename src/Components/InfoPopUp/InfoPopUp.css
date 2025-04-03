@@ -1,0 +1,114 @@
+.info-modal-main-container{
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999999;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.info-modal-main-container.show-info{
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.info-modal-containt-container{
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    background-color: #FFF;
+    position: relative;
+    border-radius: 8px;
+}
+
+.info-modal-containt-container.show-info-modal-body{
+    display: flex;
+}
+
+.info-modal-close-btn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.info-modal-close-btn img{
+    width: auto;
+    height: 20px;
+    object-fit: contain;
+}
+
+.info-modal-head{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px 0px #00000026;
+    border-bottom: 1px solid #F0F0F0;
+    background-color: #F0F0F0;
+    padding: 10px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.info-modal-head h3{
+    margin: 0;
+    font-size: var(--font-size-extra-large);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-30);
+    color: var(--secondary-text-color);
+}
+
+.info-modal-body{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FFF;
+    padding: 30px 40px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.info-po-up-table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-po-up-table tr{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.info-po-up-table tr td{
+    width: 30%;
+    font-size: var(--font-15);
+    line-height: var(--line-height-22);
+    font-weight: var(--font-weight-regular);
+    color: var(--secondary-text-color);
+}
+
+.info-po-up-table tr td:last-child{
+    width: 70%;
+    font-size: var(--font-15);
+    line-height: var(--line-height-22);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--secondary-text-color);
+}

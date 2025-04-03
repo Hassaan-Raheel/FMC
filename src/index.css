@@ -1,0 +1,855 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  /* All Application Standard Typography */
+  --font-family: "Poppins", sans-serif;
+
+  /*Radius Properties*/
+  --standered-radius: 10px;
+  --secondry-radius: 4px;
+  --standered-border: 1px solid #f0f0f0;
+  --standered-border-1: 1px dotted #f0f0f0;
+  --active-element-color: rgba(68, 135, 197, 0.65);
+
+  --dynamic-font-size: clamp(1rem, 2vw, 2rem);
+  --dynamic-padding: clamp(10px, 5vw, 30px);
+
+  /* backdrop properties */
+  --standered-backdrop: blur(4px);
+  --standered-bg: rgba(255, 255, 255, 0.6);
+  --second-layer-bg: rgba(255, 255, 255, 0.75);
+  --third-layer-bg: rgba(255, 255, 255, 0.85);
+
+  /* All Application Standard Colors */
+  --primary-color: #4487c5;
+  --publish-btn-color: #4478c5;
+  --primary-color-opacity: rgba(68, 135, 197, 0.05); /* 5% opacity version */
+  --draft-copy-btn-color: rgba(68, 120, 197, 0.2); /* 20% opacity: version */
+  --secondry-text-color: #595959;
+  /* --text-color: #595959; */
+  --text-color: #988e8e;
+  --placeholder-color: #aca4a4;
+  --text-color-opacity: rgba(89, 89, 89, 0.6); /* opacity to 60% */
+  --main-background-color: #f8f9ff;
+  --btn-background-color: #eaeaea;
+  --tbl-header-color: #fdfdfd;
+  --btns-color: #50bed3;
+  --containers-color: #ffffff;
+  --tbl-text-color: #858585;
+  --out-of-stock-color: #ff8a80;
+  --in-stock-color: #8df9a1;
+  --publish-bg-color: #8df9a11a;
+  --stock-processing-color: #ffc750;
+  --drafted-bg-color: #ffc7501a;
+  --semi-background-color: #f0f0f0;
+  --attributebBtn-background: #50bed3;
+  --border-color: #f0f0f0;
+  --black-color: #000000;
+  --questionMark-color: #453f3d;
+  --delete-color: #d14343;
+
+  /* --- OverView Dashboard --- */
+  --Light-Blue: #6f75eb  ;
+  --Dark-Blue: #353cbb;
+
+  /* ---Order Colors--- */
+  --Direct-Order: #77baf8;
+  --SEO-Order: #9ed2ff;
+  --Ads-Order: #5285b4;
+  --Reference-Order: #78abda;
+
+  /* text properties */
+  --text-color-1: #757575;
+
+  /* backdrop properties */
+  --standered-backdrop: blur(4px);
+  --standered-bg: rgba(255, 255, 255, 0.4);
+  --second-layer-bg: rgba(255, 255, 255, 0.75);
+  --third-layer-bg: rgba(255, 255, 255, 0.85);
+
+  /* Font Sizes */
+  --font-heading-size: 25px;
+  --font-22: 22px;
+  --font-size-extra-large: 20px;
+  --font-15: 15px;
+  --font-size-large: 13.5px;
+  --font-12: 12px;
+  --dynamic-font-12: clamp(0.625rem, 1vw, 1rem);
+  --font-size-medium: 14px;
+  --font-size-avg: 11.5px;
+  --font-size-small: 12px;
+  --font-size-extra-small: 10px;
+  --font-34: 34px;
+  --font-18: 18px;
+  --font-16: 16px;
+  --font-26: 26px;
+
+  /* Font Weights */
+  --font-weight-semi-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+
+  /* Box Shadow */
+
+  --box-shadow-regular: 0px 1px 4px 0px #00000026;
+  --box-shadow-regular-1: 0px 1px 4px 0px #00000029;
+
+  /* line heights */
+  --line-height-30: 30px;
+  --line-height-28: 28px;
+  --line-height-22: 22px;
+  --line-height-18: 18px;
+  --line-height-10: 10px;
+  --line-height-20: 20px;
+
+  --padding-sidebar: 10px 10px 10px 20px;
+
+  /* Spacing */
+  /* --font-size-large: 18px; */
+  /* --spacing-medium: 16px; */
+
+  /* DataTable Header Styles */
+  .dataTable thead th {
+    height: 52px !important;
+    border-radius: 5px 5px 0px 0px !important;
+    background: #fdfdfd !important;
+    text-align: center !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    color: var(--text-color) !important;
+    border: none !important;
+    /* box-Shadow: '0px 1px 4px 0px #00000026', */
+    /* gap: '70px', */
+    /* opacity: '1', */
+
+    /* Text Editor Custom CSS */
+
+    --ck-border-radius: 5px !important;
+  }
+
+  /* body {
+  background-image: url(../src/Assets//Images/bg.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  
+} */
+
+  /* DataTable Cells Styles */
+  .dataTable tbody td {
+    height: 66px !important;
+    text-align: center !important;
+    background: #ffffff !important;
+    border-top: 1px solid #f0f0f0 !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    color: #858585 !important;
+  }
+
+  /* Action Button Styling */
+  .dataTable .action-btn {
+    cursor: pointer !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .sc-fAUdSK .sc-dntaoT .sc-dpBQxM .ELGCi .btufXN .NbHYZ .rdt_TableCol {
+    width: 5px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family) !important;
+}
+
+/* body {
+  overflow: hidden; 
+  font-family: var(--font-family);
+  color: var(--text-color);
+  padding: 10px;
+  background-image: url('./Assets/check-images/main-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+} */
+
+body {
+  margin: 0; /* Remove default body margin */
+  overflow: hidden; /* Prevent body from scrolling */
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: var(--standered-bg); /* Semi-transparent background color */
+  backdrop-filter: var(--standered-backdrop); /* Add blur effect */
+  background-image: url("./Assets/check-images/main-bg.jpg");
+  background-blend-mode: overlay; /* Blend color and image */
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  box-sizing: border-box;
+}
+
+.css-vtgxq7-control {
+  border-color: none !important;
+}
+
+.ck.ck-balloon-panel.ck-powered-by-balloon
+  .ck.ck-powered-by
+  .ck-powered-by__label {
+  color: var(--ck-powered-by-text-color);
+  cursor: pointer;
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  line-height: normal;
+  margin-right: 4px;
+  padding-left: 2px;
+  text-transform: uppercase;
+  display: none;
+}
+
+.dknajr {
+  background-color: transparent !important;
+}
+
+.bAhklE {
+  background-color: transparent !important;
+  justify-content: center !important;
+}
+
+.NbHYZ {
+  background-color: transparent !important;
+}
+
+/* Table Header */
+.caNzNe {
+  background-color: var(--third-layer-bg) !important;
+}
+
+.hudJpJ {
+  background-color: transparent !important;
+  justify-content:space-between !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+.caGQWA {
+  background-color: transparent !important;
+}
+
+.cHYGqH {
+  background-color: transparent !important;
+  /* justify-content: space-evenly !important; */
+}
+
+.chYGqH {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: var(--third-layer-bg) !important;
+  min-height: 52px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  justify-content: space-between !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+/* Table Body */
+.htmdXE {
+  background-color: transparent !important;
+  overflow: visible !important;
+  position: relative !important;
+  z-index: 10 !important;
+  justify-content: space-between !important;
+}
+
+.iGxMlw {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent !important;
+  min-height: 48px;
+  /* z-index: 10 !important; */
+}
+
+/* Updated Data Table Development-Class for Rendering of Full Action Dropdown */
+.gvYsEF {
+  position: relative;
+  width: 100%;
+  border-radius: inherit;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  min-height: 0;
+}
+
+/* --- Updated Data Table Server-Class for rendering of full action dropdown --- */
+
+.ccImWe {
+  position: relative;
+  width: 100%;
+  border-radius: inherit;
+  overflow: visible !important;
+  min-height: 0px;
+}
+
+/* --- For Header Color --- */
+
+.bTgDzm {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100%;
+  background-color: var(--third-layer-bg) !important;
+  min-height: 52px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.bIPdjB {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent !important;
+}
+
+/* --- For Body Color --- */
+
+.bnEkYQ {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+  /* align-content: stretch; */
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent !important;
+  min-height: 48px;
+}
+
+/* --------------------------------------- */
+
+.DataTable-container {
+  overflow: visible !important;
+}
+
+.yGWof,
+.ddvZdT {
+  background-color: transparent !important;
+}
+
+.kVRFpc,
+.jxfdww,
+.gghkmo,
+.grhRTQ,
+.juAYtc,
+.juAYtc,
+.kVRFpc,
+.HXUEh {
+  background-color: transparent !important;
+}
+
+.iGxMlw,
+.HXUEh,
+.kVRFpc,
+.ljqMhY,
+.juAYtc,
+.fWAvZZ,
+.gghkmo,
+.jxfdww,
+.jFXlQg,
+.juErGo {
+  background-color: transparent !important;
+  /* justify-content: space-between !important; */
+  justify-content: space-between !important;
+}
+
+.HXUEh, .ddvZdT, .fWAvZZ, .gghkmo, .grhRTQ, .hXGOzQ, .iGxMlw, .jFXlQg, .juAYtc, .juErGo, .jxfdww, .kVRFpc, .ljqMhY, .yGWof {
+  background-color: transparent !important;
+  /* justify-content: space-evenly !important; */
+  justify-content: space-between !important;
+}
+
+
+
+/* --- Product Review Body 1st-Column --- */
+
+.iXbgys {
+  justify-content: center !important;
+}
+
+/* --- Header 1st Column (CheckBox) Product Category --- */
+
+.HXUEh {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 0;
+  min-width: 40px !important;
+  max-width: 50px !important;
+  justify-content: center !important;
+  /*padding-left: 20px !important;*/ /*Remove due to Blog Category Table Header Check Box Alignment */  
+}
+
+/* --- Header 2nd & 3rd Column (Image / Name) Product Category --- */
+
+.gghkmo {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  min-width: 100px !important;
+  max-width: 125px !important;
+}
+
+.fdVdPF {
+  flex: 1 0 0px;
+  min-width: 325px !important;
+  max-width: 325px !important;
+}
+
+/* --- Header 4th Column (Description) Product Category --- */
+
+.grhRTQ {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  min-width: 100px !important;
+  max-width: 135px !important;
+}
+
+/* --- Header 5th Column (Slug) Product Category --- */
+
+.bGNzao {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  min-width: 90px !important;
+  max-width: 100px !important; 
+}
+
+/* --- Header 6th Column (Count) Product Category --- */
+
+.jCyzhI {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  min-width: 80px !important;
+  max-width: 90px !important;
+}
+
+/* --- Header 7th Column (Action) Product Category --- */
+
+.frGZKE {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  min-width: 70px !important;
+  max-width: 80px !important;
+}
+
+/* -------------------- End of Header Columns -------------------- */
+
+
+
+
+.cmPbTQ {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  max-width: 125px !important;
+  min-width: 100px !important;
+}
+
+/* For 7th Column Width */
+.bkebJY {
+  max-width: 130px !important;
+}
+
+.eVWHNN {
+  max-width: 130px !important;
+}
+
+.hXGOzQ {
+  background-color: transparent !important;
+}
+
+/* Shipping Zone Table Body */
+
+.hqFOBH {
+  background: transparent !important;
+  border-top: var(--standered-border) !important;
+}
+
+.ELGCi {
+  background: transparent !important;
+}
+
+.ck.ck-editor__main > .ck-editor__editable {
+  /* background: var(--ck-color-base-background); */
+  background: var(--second-layer-bg) !important;
+  border-radius: 0 0 4px 4px !important;
+  border: var(--standered-border) !important;
+}
+
+.kHlPhz {
+  justify-content: center !important;
+}
+
+.jNISDs {
+  justify-content: center !important;
+}
+
+.dLHSn {
+  justify-content: center !important;
+}
+
+
+
+.ck-rounded-corners
+  .ck.ck-editor__top
+  .ck-sticky-panel
+  .ck-sticky-panel__content,
+.ck.ck-editor__top
+  .ck-sticky-panel
+  .ck-sticky-panel__content.ck-rounded-corners {
+  /* border-radius: var(--ck-border-radius) ; */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-radius: 4px 4px 0 0 !important;
+  background: var(--third-layer-bg) !important;
+  border: var(--standered-border) !important;
+}
+
+/* For Ant Design Range Picker... */
+
+/*.ant-picker .ant-picker-range .ant-picker-outlined .css-dev-only-do-not-override-161f05s*/
+:where(.css-dev-only-do-not-override-161f05s).ant-picker {
+  box-sizing: border-box;
+  margin-top: 5px !important;
+  padding: 4px 11px 4px;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1;
+  list-style: none;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; */
+  font-family: var(--font-family);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 70% !important;
+  border-radius: 4px !important;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  outline: none !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-outlined {
+  background: var(--third-layer-bg) !important;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f0f0f0 !important;
+  outline: none !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-outlined:hover {
+  border-color: #f0f0f0 !important;
+  background-color: var(--third-layer-bg) !important;
+  outline: none !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-range
+  .ant-picker-active-bar {
+  bottom: -1px;
+  height: 2px;
+  background: #1677ff;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+  border: var(--standered-border) !important;
+  outline: none !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-decade-panel,
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-year-panel,
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-quarter-panel,
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-month-panel,
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-week-panel,
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-date-panel,
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-time-panel {
+  display: flex;
+  flex-direction: column;
+  width: 205px !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-content
+  th {
+  height: 30px !important;
+  color: rgba(0, 0, 0, 0.88);
+  vertical-align: middle;
+  font-size: 12px !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-content
+  th,
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-content
+  td {
+  position: relative;
+  min-width: 24px;
+  font-weight: normal;
+  font-size: 12px !important;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker-dropdown
+  .ant-picker-cell {
+  padding: 4px 0 !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+  cursor: pointer;
+}
+
+:where(.css-dev-only-do-not-override-161f05s).ant-picker
+  .ant-picker-input
+  > input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: inherit;
+  font-size: var(--font-size-small) !important;
+  color: var(--text-color-1) !important;
+  line-height: 1.5714285714285714;
+  transition: all 0.2s;
+  flex: auto;
+  min-width: 1px;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  /* background: var(--third-layer-bg) !important; */
+  border: 0;
+  font-family: var(--font-family) !important;
+}
+
+/* --- Customization of Apex Chart--- */
+
+.apexcharts-legend-text {
+  position: relative;
+  font-size: 10px !important;
+}
+
+.apexcharts-text tspan {
+  font-size: var(--font-size-extra-small) !important;
+  font-weight: var(--font-weight-medium) !important;
+  color: var(--text-color-1) !important;
+  line-height: 18px !important;
+}
+.apexcharts-legend {
+  display: flex;
+  overflow: auto;
+  padding: 0 0 0 15px !important;
+}
+
+/* sc-eUlrpB hZZlND */
+
+/* --- Data Table Lasr Row Action dropdown clipped off Resolution Class --- */
+.hZZlND {
+  position: relative;
+  width: 100%;
+  border-radius: inherit;
+  overflow-x: visible !important;
+  overflow-y: visible !important; 
+  min-height: 0;
+}
+
+/*Server Class*/
+/*sc-eUlrpB egKzlE */
+.egKzlE {
+  position: relative;
+  width: 100%;
+  border-radius: inherit;
+  overflow-x: visible !important; 
+  overflow-y: visible !important;
+  min-height: 0px;
+}
+
+#apexchartsq0vrtxvn, #apexchartsraddr4d5 {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#apexchartseawi185 {
+  width: 100% !important;
+}
+
+.apexcharts-canvas {
+  width: 100% !important;
+}
+
+.ant-card css-dev-only-do-not-override-cdzvx5 {
+  background: var(--third-layer-bg) !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-card {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  position: relative;
+  background: transparent !important;
+  border-radius: 8px;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-card .ant-card-body {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-date-panel .ant-picker-body {
+  font-size: 12px !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-decade-panel, :where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-year-panel, :where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-quarter-panel, :where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-month-panel, :where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-week-panel, :where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-date-panel, :where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-time-panel {
+  width: 175px !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-picker-dropdown .ant-picker-header-view {
+  font-size: 12px !important;
+}
+
+.jjtXat {
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.bOodFN {
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+/* --- All Product Data Table Column - PRoduct Name + SKU --- */
+
+.bgiQlh {
+  min-width: 120px !important;
+  max-width: 130px !important;
+}
+
+.hVDUSe {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-switch.ant-switch-checked .ant-switch-inner .ant-switch-inner-checked {
+  margin-top: 2px !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-switch .ant-switch-inner .ant-switch-inner-unchecked {
+  margin-top: -20px !important;
+}
+
+/* Padding decrease due to Blog Categry Table Alignment */
+.dnpqrR {
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+
+@media screen and (min-width: 2000px) and (max-width: 2500px) {
+  :root {
+    --font-heading-size: 29px;
+    --font-22: 26px;
+    --font-size-extra-large: 24px;
+    --font-15: 19px;
+    --font-size-large: 17.5px;
+    --font-12: 16px;
+    --dynamic-font-12: clamp(0.625rem, 1vw, 1rem);
+    --font-size-medium: 18px;
+    --font-size-avg: 15.5px;
+    --font-size-small: 16px;
+    --font-size-extra-small: 14px;
+    --font-34: 38px;
+    --font-18: 22px;
+    --font-16: 20px;
+    --font-26: 30px;
+    /* --- Line Height --- */
+    --line-height-10: 14px;
+    --line-height-20: 24px;
+    /* --- Padding Sidebar --- */
+    --padding-sidebar: 14px 14px 14px 24px;
+  }
+}
+
+@media screen and (min-width: 2501px) {
+  :root {
+    --font-heading-size: 32px;
+    --font-22: 28px;
+    --font-size-extra-large: 26px;
+    --font-15: 21px;
+    --font-size-large: 19px;
+    --font-12: 18px;
+    --dynamic-font-12: clamp(0.75rem, 1.2vw, 1.2rem);
+    --font-size-medium: 20px;
+    --font-size-avg: 17px;
+    --font-size-small: 18px;
+    --font-size-extra-small: 16px;
+    --font-34: 42px;
+    --font-18: 24px;
+    --font-16: 22px;
+    --font-26: 34px;
+    /* --- Line Height --- */
+    --line-height-10: 16px;
+    --line-height-20: 26px;
+    /* --- Padding Sidebar --- */
+    --padding-sidebar: 16px 16px 16px 26px;
+  }
+}
+
+.ant-picker .ant-picker-input >input {
+  color: var(--text-color-1) !important;
+  font-size: var(--font-12) !important;
+}
+
+/* --- After NPM Update ---- */
+/* --- For Change in Data Table Header --- */
+
+.jUdrYO {
+  background-color: transparent !important;
+}
+
+/* For Table Header */
+.iIjLKU {
+  background-color: var(--second-layer-bg) !important;
+  justify-content: space-between !important;
+}
+
+/* For Table Body */
+.jXMJZY {
+  background-color: transparent !important;
+  justify-content: space-between !important;
+}

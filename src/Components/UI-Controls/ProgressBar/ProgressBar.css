@@ -1,0 +1,24 @@
+.top-category-product-progress {
+    --progress-color: #4457C5;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    appearance: none;
+}
+
+.top-category-product-progress::-webkit-progress-value {
+    background-color: var(--progress-color);
+    transition: width 1s ease-in-out;
+}
+
+.top-category-product-progress::-moz-progress-bar {
+    background-color: var(--progress-color);
+    transition: width 1s ease-in-out;
+}
+
+.top-category-product-progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
