@@ -1,0 +1,30 @@
+.graphs
+{
+    display: flex;
+    justify-content: left;
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); 
+    height: 400px;
+    padding: 30px 30px 10px 10px;
+    
+}
+.charts h3
+{
+margin: 0px;
+padding: 0px;
+margin-bottom: 0px;
+    
+}
+.margin
+{
+    margin-left: 0px;
+}
+
+.margin path
+{
+    stroke-width: 4;
+    stroke: transparent;
+}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Collapse } from 'antd';
-import "../Style.css"; 
 import { site_url } from "../Services/Api";
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
 // const formatNumber = (num) => {
@@ -448,12 +447,12 @@ const MetaAdsInsights = () => {
       {/* Display Totals for Filtered Campaigns */}
       <h3>Instagram Ads Performance</h3>
       <div className="grid2">
-        <p>Amount Spend<strong>${totals.spend.toFixed(2)}</strong> </p>
-        <p>Impressions<strong>{totals.impressions}</strong> </p>
-        <p>Clicks<strong>{totals.clicks}</strong> </p>
-        <p>CPM<strong>${totals.cpm.toFixed(2)}</strong> </p>
-        <p>CTR<strong>{totals.ctr.toFixed(2)}%</strong> </p>
-        <p>CPC<strong>${totals.cpc.toFixed(2)}</strong> </p>
+        <p>Amount Spend:<strong>${totals.spend.toFixed(2)}</strong> </p>
+        <p>Impressions:<strong>{totals.impressions}</strong> </p>
+        <p>Clicks:<strong>{totals.clicks}</strong> </p>
+        <p>CPM:<strong>${totals.cpm.toFixed(2)}</strong> </p>
+        <p>CTR:<strong>{totals.ctr.toFixed(2)}%</strong> </p>
+        <p>CPC:<strong>${totals.cpc.toFixed(2)}</strong> </p>
       </div>
       </div>
       </div>
@@ -738,7 +737,7 @@ const MetaAdsInsights = () => {
       </div>
       
       <div className="ads-list">
-  <div className="table-container2 overflow-auto">
+  <div className="table-container overflow-auto">
     {filteredAdsData.length > 0 && (
       <table className="min-w-full border-collapse border border-gray-300">
         <thead>

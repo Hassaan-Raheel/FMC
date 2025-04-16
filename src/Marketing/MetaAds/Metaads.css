@@ -562,6 +562,7 @@ margin: 0px 0px 0px 10px;
     text-align: justify;
     max-height: 90px; /* Limit height but allow scrolling */
     padding-right: 8px; /* Prevent text from touching the edge */
+    margin-bottom: 20px;
   }
   .card p::-webkit-scrollbar {
     width: 6px;
@@ -1193,77 +1194,97 @@ button:hover {
 
 .table-container {
   width: 100%;
-  overflow-x: auto; /* Enables horizontal scrolling if the table is wider than the container */
-  -webkit-overflow-scrolling: touch; /* For better scrolling on mobile devices */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-top: 20px;
-  box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
-  -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
-  backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
-  background: var(--second-layer-bg); /* Your custom transparent background */
-  border-radius: var(--standered-radius); /* Smooth corners */
+  box-shadow: 0 1px 4px #00000029;
+  backdrop-filter: var(--standered-backdrop);
+  -webkit-backdrop-filter: var(--standered-backdrop);
+  background: var(--second-layer-bg);
+  border-radius: var(--standered-radius);
+  height: 145px;
+  /* New containment property */
+  contain: strict;
+}
+
+.table-container2 {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 20px;
+  box-shadow: 0 1px 4px #00000029;
+  backdrop-filter: var(--standered-backdrop);
+  -webkit-backdrop-filter: var(--standered-backdrop);
+  background: var(--second-layer-bg);
+  border-radius: var(--standered-radius);
+  height: 500px;
+  /* New containment property */
+  contain: strict;
 }
 
 table {
-  width: 100%; /* Ensures table takes up full available width */
-  border-collapse: collapse; /* For better border styling */
+  width: 100%;
+  border-collapse: collapse;
   border: 1px solid #ddd;
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 14px); /* Fluid font sizing */
+  min-width: auto; /* Changed from fixed width */
 }
 
-
-thead {
-  background-color: #f2f2f2;
+/* Improved column width handling */
+th, td {
+  min-width: 120px; /* Minimum reasonable column width */
+  max-width: 30vw; /* Maximum column width relative to viewport */
 }
 
 th {
-  padding: 12px;
+  padding: clamp(8px, 1.2vw, 12px); /* Responsive padding */
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid #ddd;
-  white-space: nowrap;
+  white-space: normal; /* Allow header text wrapping */
+  font-size: 15px;
 }
 
-/* Body Styling */
 td {
-  padding: 10px;
+  padding: clamp(6px, 1vw, 10px);
   border-bottom: 1px solid #ddd;
-  white-space: nowrap;
+  white-space: normal; /* Allow content wrapping */
+  font-size: 15px;
 }
-
-/* Alternating Row Background */
-/* Hover Effect */
-tbody tr:hover {
-  background-color: #f1f1f1;
-  transition: 0.2s;
+.table-container2 td {
+  padding: clamp(6px, 1vw, 10px);
+  border-bottom: 1px solid #ddd;
+  white-space: normal; /* Allow content wrapping */
+  font-size: 11px;
+  
 }
-
-/* Center Align Numeric Columns */
-td.text-center {
-  text-align: center;
-}
-
-/* Icon Styling */
-td i {
-  margin-left: 5px;
-  color: #3498db; /* Dark Gray */
-  font-size: 14px;
-}
-
-/* Responsive Table for Small Screens */
+/* Enhanced responsive handling */
 @media (max-width: 768px) {
-  th, td {
-    font-size: 12px;
-    padding: 8px;
+  table {
+    display: table; /* Maintain table layout */
+    width: 100%;
+    height: auto;
   }
 
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+  th, td {
+    min-width: 90px; /* Smaller minimum for mobile */
+    max-width: 25vw;
   }
 }
 
-.margin-bottom
-{
+@media (hover: hover) {
+  tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.2s ease;
+  }
+}
+
+/* Accessibility improvements */
+td:focus, th:focus {
+  outline: 2px solid #3498db;
+  outline-offset: -1px;
+}
+
+.margin-bottom {
   margin-bottom: 20px;
 }

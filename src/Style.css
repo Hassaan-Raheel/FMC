@@ -1291,3 +1291,280 @@
     transform: scaleY(1.3); /* Slightly enlarge for better interaction */
 }
 
+/* For the ads-list table */
+.ads-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+/* Table container for horizontal scroll on mobile */
+.table-container1 {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Visual indicator for scrollable area */
+  margin: 1rem 0;
+}
+
+/* Responsive table styles */
+.ads-list th,
+.ads-list td {
+  min-width: 120px; /* Minimum column width */
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Sticky first column for better mobile experience */
+.ads-list th:first-child,
+.ads-list td:first-child {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+  .ads-list {
+    font-size: 14px;
+    min-width: 600px; /* Minimum table width */
+  }
+  
+  .ads-list th,
+  .ads-list td {
+    padding: 8px 10px;
+    min-width: 100px;
+  }
+
+  /* Add scrollbar styling (optional) */
+  .table-container1::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .table-container1::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+}
+
+@media print {
+  .table-container1 {
+    overflow: visible;
+  }
+  .ads-list {
+    min-width: 100%;
+  }
+}
+/* Table Container */
+.pdf-section .table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Table Styling */
+.pdf-section .ads-list table {
+  width: 100%;
+  min-width: 600px; /* Minimum table width for mobile scrolling */
+  border-collapse: collapse;
+  background: white;
+}
+
+/* Table Header */
+.pdf-section .ads-list thead {
+  position: sticky;
+  left: 0;
+  background: #f8f9fa;
+}
+
+.pdf-section .ads-list th {
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+  background: #f8f9fa;
+}
+
+/* Sticky First Column */
+.pdf-section .ads-list th:first-child,
+.pdf-section .ads-list td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #f8f9fa;
+}
+
+/* Table Cells */
+.pdf-section .ads-list td {
+  padding: 12px 16px;
+  border: 1px solid #dee2e6;
+  white-space: nowrap;
+  background: white;
+}
+
+/* Hover Effect */
+.pdf-section .ads-list tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .pdf-section .ads-list table {
+    font-size: 14px;
+  }
+  
+  .pdf-section .ads-list th,
+  .pdf-section .ads-list td {
+    padding: 8px 12px;
+    min-width: 120px;
+  }
+
+  /* Scrollbar Styling */
+  .pdf-section .table-container::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .pdf-section .table-container::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdf-section .ads-list table {
+    min-width: 500px;
+  }
+  
+  .pdf-section .ads-list th,
+  .pdf-section .ads-list td {
+    padding: 6px 10px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .pdf-section .table-container {
+    overflow: visible !important;
+  }
+  
+  .pdf-section .ads-list table {
+    min-width: 100% !important;
+  }
+  
+  .pdf-section .ads-list th:first-child,
+  .pdf-section .ads-list td:first-child {
+    position: static;
+  }
+}
+
+/* Grid Container */
+.grid23 {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Grid Items */
+.card2 {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+  background: white;
+  break-inside: avoid;
+}
+
+.card2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive Columns */
+@media (max-width: 640px) {
+  .grid23 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .card2 {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .grid23 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) {
+  .grid23 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Content Styling */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.text-section {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.icon-container {
+  flex-shrink: 0;
+}
+
+.label {
+  color: #4a5568;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+/* Scrollable Insights */
+.insights {
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .ad-title, .campaign-name, .campaign-status {
+    font-size: 0.875rem;
+  }
+  
+  .label, .value {
+    font-size: 0.75rem;
+  }
+  
+  .grid22 h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .grid23 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .card2 {
+    page-break-inside: avoid;
+    border: 1px solid #ddd;
+  }
+}
+/* 
+.fixed-height {
+  height: 100px !important;
+} */

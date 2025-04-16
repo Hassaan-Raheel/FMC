@@ -1,6 +1,6 @@
 import React from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
-import "../Style.css"; 
+
 const DailySpendRoasGraph = ({ data }) => {
   // Safeguard: Ensure data is an array
   const validData = Array.isArray(data) ? data : [];

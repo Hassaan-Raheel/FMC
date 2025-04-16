@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Collapse } from "antd";
-import "../Style.css"; 
 import '../Marketing/MetaAds/Metaads.css'; 
 import FunnelComponent from "./Funnelcomponent";
 import DailySpendRoasGraph from "./DailySpendRoasGraph";
@@ -377,34 +376,36 @@ const Googleadforreport = () => {
       </div>
    
       {/* Table */}
-      <div className="ads-list w-full">
-  <div className="table-container2 w-full overflow-x-auto">
-    <table className="min-w-[900px] w-full border-collapse border border-gray-300">
+      <div className="ads-list">
+  <div className="table-container overflow-auto">
+    <table className="w-full border-collapse border border-gray-300">
       <thead>
         <tr className="bg-gray-200">
-          <th className="border px-4 py-2 whitespace-nowrap">Campaign</th>
-          <th className="border px-4 py-2 whitespace-nowrap">Campaign Type</th>
-          <th className="border px-4 py-2 whitespace-nowrap">Clicks</th>
-          <th className="border px-4 py-2 whitespace-nowrap">Impressions</th>
-          <th className="border px-4 py-2 whitespace-nowrap">Cost</th>
-          <th className="border px-4 py-2 whitespace-nowrap">CTR</th>
-          <th className="border px-4 py-2 whitespace-nowrap">Avg CPC</th>
-          <th className="border px-4 py-2 whitespace-nowrap">Conversions</th>
-          <th className="border px-4 py-2 whitespace-nowrap">Cost Per Conversion</th>
+          {/* Set specific widths for each column */}
+          <th className="border px-4 py-2 w-[150px] whitespace-nowrap overflow-hidden truncate">Campaign</th>
+          <th className="border px-4 py-2 w-[120px]">Campaign Type</th>
+          <th className="border px-4 py-2 w-[80px]">Clicks</th>
+          <th className="border px-4 py-2 w-[100px]">Impressions</th>
+          <th className="border px-4 py-2 w-[80px]">Cost</th>
+          <th className="border px-4 py-2 w-[80px]">CTR</th>
+          <th className="border px-4 py-2 w-[80px]">Avg CPC</th>
+          <th className="border px-4 py-2 w-[100px]">Conversions</th>
+          <th className="border px-4 py-2 w-[120px]">Cost Per Conversions</th>
         </tr>
       </thead>
       <tbody>
         {googleAdsData.map((campaign) => (
-          <tr key={campaign.Campaign} className="hover:bg-gray-100">
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign.Campaign}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign["Campaign type"]}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign.Clicks}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign["Impr."]}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">${campaign.Cost}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign.CTR}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign["Avg. CPC"]}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign.Conversions}</td>
-            <td className="border px-4 py-2 whitespace-nowrap">{campaign["Cost / conv."]}</td>
+          <tr key={campaign.Campaign} className="border border-gray-300 hover:bg-gray-100">
+            {/* Apply the same widths to the corresponding <td> elements */}
+            <td className="border px-4 py-2 w-[150px] whitespace-nowrap overflow-hidden truncate">{campaign.Campaign}</td>
+            <td className="border px-4 py-2 w-[120px]">{campaign["Campaign type"]}</td>
+            <td className="border px-4 py-2 w-[80px]">{campaign.Clicks}</td>
+            <td className="border px-4 py-2 w-[100px]">{campaign["Impr."]}</td>
+            <td className="border px-4 py-2 w-[80px]">${campaign.Cost}</td>
+            <td className="border px-4 py-2 w-[80px]">{campaign.CTR}</td>
+            <td className="border px-4 py-2 w-[80px]">{campaign["Avg. CPC"]}</td>
+            <td className="border px-4 py-2 w-[100px]">{campaign.Conversions}</td>
+            <td className="border px-4 py-2 w-[120px]">{campaign["Cost / conv."]}</td>
           </tr>
         ))}
       </tbody>

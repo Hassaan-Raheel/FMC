@@ -4,7 +4,7 @@ import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import "../Style.css"; 
+
 Chart.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 // Color Gradients

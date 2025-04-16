@@ -3,7 +3,6 @@ import axios from "axios";
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import '../Marketing/MetaAds/Metaads.css'; // Assuming the CSS is imported here or globally
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import "../Style.css"; 
 // import { FaThumbsUp, FaEye, FaShareAlt, FaMoneyBillWave, FaPlayCircle } from 'react-icons/fa'; // Example icons from react-icons
 import { 
   FaEye, 
@@ -239,10 +238,8 @@ const Facebookadsforreport = ({ setMetaAdCount }) => {
     }
   
     return (
-      <div className="table-container2 overflow-auto " 
-     
-      >
-        <table className="min-w-full border-collapse border border-gray-300 fixed-height">
+      <div className="table-container overflow-auto">
+        <table className="min-w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-100 text-left">
               <th className="border border-gray-300 p-2">Campaign Name</th>
@@ -684,11 +681,7 @@ const Facebookadsforreport = ({ setMetaAdCount }) => {
 
       <div className="ads-list">
   {filteredMetaAds.length > 0 ? (
-    <div className="pdf-section">
-    
-        {renderAdDetailsTable()} {/* Your table-rendering function */}
-     
-    </div>
+    renderAdDetailsTable() // Call it ONCE to render a single table
   ) : (
     <p>No Meta Ads found</p>
   )}

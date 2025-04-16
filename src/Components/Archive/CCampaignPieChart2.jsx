@@ -4,7 +4,7 @@ import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import "../Style.css"; 
+
 Chart.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 // Color Gradients
@@ -91,7 +91,7 @@ const pieChartOptions = {
 };
 
 
-const CampaignDetailsPieCharts = ({ campaignData }) => {
+const CCampaignPieChart2 = ({ campaignData }) => {
   const aggregateData = (field, valueField) =>
     campaignData.reduce((acc, campaign) => {
       const key = campaign[field] || "Unknown";
@@ -107,45 +107,40 @@ const CampaignDetailsPieCharts = ({ campaignData }) => {
   const audienceByCampaignType = aggregateData("Campaign type", "Audience");
   const audienceByCampaignName = aggregateData("Campaign", "Audience");
 
-
   return (
-  <div className="tab-container">
-        <Tabs>
-          <TabList className="tab-list">
-            <Tab className="tab">Amount Spent</Tab>
-            <Tab className="tab">Conversions</Tab>
-          </TabList>
-  
-          <TabPanel>
-            <div className="tab gridpie">
-              <div className="chart-container">
-                <h3>Amount Spent by Campaign Type</h3>
-                <Pie data={generateChartData(costByCampaignType, "Cost ($)", RED_SHADES)} options={pieChartOptions} />
-              </div>
-              <div className="chart-container">
-                <h3>Amount Spent by Campaign Name</h3>
-                <Pie data={generateChartData(costByCampaignName, "Cost ($)", BLUE_SHADES)} options={pieChartOptions} />
-              </div>
-            </div>
-          </TabPanel>
-  
-          <TabPanel>
-            <div className="gridpie">
-              <div className="chart-container">
-                <h3>Conversions by Campaign Type</h3>
-                <Pie data={generateChartData(convByCampaignType, "Conversions", RED_SHADES)} options={pieChartOptions} />
-              </div>
-              <div className="chart-container">
-                <h3>Conversions by Campaign Name</h3>
-                <Pie data={generateChartData(convByCampaignName, "Conversions", BLUE_SHADES)} options={pieChartOptions} />
-              </div>
-            </div>
-          </TabPanel>
-
-        </Tabs>
+    <div className="panel-container">
+    {/* Section 1: Amount Spent */}
+    <div className="panel">
+      <h3 className="tab1 text-lg mb-0 mt-0">Amount Spent</h3>
+      <div className="gridpie">
+        <div className="chart-container">
+          <h3>Amount Spent by Campaign Type</h3>
+          <Pie data={generateChartData(costByCampaignType, "Cost ($)", RED_SHADES)} options={pieChartOptions} />
+        </div>
+        <div className="chart-container">
+          <h3>Amount Spent by Campaign Name</h3>
+          <Pie data={generateChartData(costByCampaignName, "Cost ($)", BLUE_SHADES)} options={pieChartOptions} />
+        </div>
       </div>
+    </div>
   
+    {/* Section 2: Conversions */}
+    <div className="panel">
+      <h3 className="tab1 text-lg mb-0 mt-0">Conversions</h3>
+      <div className="gridpie">
+        <div className="chart-container">
+          <h3>Conversions by Campaign Type</h3>
+          <Pie data={generateChartData(convByCampaignType, "Conversions", RED_SHADES)} options={pieChartOptions} />
+        </div>
+        <div className="chart-container">
+          <h3>Conversions by Campaign Name</h3>
+          <Pie data={generateChartData(convByCampaignName, "Conversions", BLUE_SHADES)} options={pieChartOptions} />
+        </div>
+      </div>
+    </div>
+  
+  </div>
   );
 };
 
-export default CampaignDetailsPieCharts;
+export default CCampaignPieChart2;
