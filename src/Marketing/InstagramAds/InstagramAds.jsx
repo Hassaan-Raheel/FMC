@@ -4,6 +4,7 @@ import { Collapse } from 'antd';
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { site_url } from "../../Services/Api";
 import '../MetaAds/Metaads.css';
+import "../../Style.css"; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { 
   FaEye, 
@@ -719,7 +720,7 @@ const MetaAdsInsights = ({}) => {
       </div>
       
       <div className="ads-list">
-  <div className="table-container overflow-auto">
+  <div className="table-container2 overflow-auto">
     {filteredAdsData.length > 0 && (
       <table className="min-w-full border-collapse border border-gray-300">
         <thead>

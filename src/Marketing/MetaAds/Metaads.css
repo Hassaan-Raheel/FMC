@@ -1258,6 +1258,15 @@ td {
   font-size: 11px;
   
 }
+.table-container2 th {
+  padding: clamp(8px, 1.2vw, 12px); /* Responsive padding */
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  white-space: normal; /* Allow header text wrapping */
+  font-size: 11px;
+}
+
 /* Enhanced responsive handling */
 @media (max-width: 768px) {
   table {

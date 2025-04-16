@@ -3,6 +3,7 @@ import axios from "axios";
 import { Collapse, Upload, Button, message } from "antd";  // Added Upload and Button here
 import { UploadOutlined } from "@ant-design/icons";  // Added for the upload icon
 import "../MetaAds/Metaads.css";
+import "../../Style.css"; 
 import { site_url } from "../../Services/Api";
 import FunnelComponent from "../../Components/Funnelcomponent";
 import DailySpendRoasGraph from "../../Components/DailySpendRoasGraph";
@@ -559,7 +560,7 @@ const GoogleAdsOverviewPage = ({ }) => {
    
       {/* Table */}
       <div className="ads-list">
-        <div className="table-container overflow-auto">
+        <div className="table-container2 overflow-auto">
       <table className="w-full border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-200">
