@@ -1,0 +1,123 @@
+/* Apply border radius */
+.jodit-container {
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners affect the content */
+    /* border: 1px solid #ddd; */
+    border: var(--standered-border);
+  }
+  
+  /* Customize the toolbar (header) background */
+  .jodit-toolbar {
+    background-color: #f0f0f0; /* Light gray background */
+    /* border-bottom: 1px solid #ccc; */
+    border-bottom: var(--standered-border);
+  }
+  
+  /* Customize the content area */
+  .jodit-wysiwyg {
+    /* background-color: #fafafa; */
+    color: #333; /* Optional: Set text color */
+    padding: 10px; /* Optional: Add padding inside the editor */
+    border-radius: 0 0 10px 10px; /* Match the container border radius */
+    background: transparent;
+  }
+
+  .jodit-container:not(.jodit_inline) {
+    /* background-color: #f5f5f6; */
+    /* border: 1px solid #dadada; */
+    border: var(--standered-border);
+    border-radius: 3px;
+}
+
+.jodit-container:not(.jodit_inline) {
+    min-height: 100px;
+}
+
+.jodit-container:not(.jodit_inline) .jodit-wysiwyg {
+    margin: 0;
+    outline: 0;
+    overflow-x: auto;
+    padding: 8px;
+    position: relative;
+    background: var(--second-layer-bg) !important;
+    height: 175px;
+}
+
+/* Set a fixed height for the content section */
+.jodit-wysiwyg {
+    /* max-height: 170px; */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+  }
+  
+  /* Customize the scrollbar */
+  .jodit-wysiwyg::-webkit-scrollbar {
+    width: 3px; /* Set the scrollbar width */
+  }
+  
+  .jodit-wysiwyg::-webkit-scrollbar-track {
+    background: transparent; /* Make the track background transparent */
+  }
+  
+  .jodit-wysiwyg::-webkit-scrollbar-thumb {
+    background: #888; /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Optional: Add rounded corners to the thumb */
+  }
+  
+  .jodit-wysiwyg::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change thumb color on hover */
+  }
+  
+  /* Hide the up and down arrow buttons */
+  .jodit-wysiwyg::-webkit-scrollbar-button {
+    display: none; /* Completely hide the scrollbar buttons */
+  }
+
+.jodit-status-bar a.jodit-status-bar-link {
+  cursor: pointer;
+  display: none !important;
+}
+
+/* --- Working on OL & UL ---- */
+
+/* Style unordered and ordered lists inside the Jodit editor */
+.jodit-wysiwyg ul, .jodit-wysiwyg ol {
+  margin: 10px 0; /* Add vertical spacing */
+  padding-left: 20px; /* Add indentation */
+}
+
+/* Style for unordered list items */
+.jodit-wysiwyg ul {
+  list-style-type: disc; /* Use bullets for unordered lists */
+}
+
+/* Style for ordered list items */
+.jodit-wysiwyg ol {
+  list-style-type: decimal; /* Use numbers for ordered lists */
+}
+
+/* Optional: Customize list item appearance */
+.jodit-wysiwyg ul li, .jodit-wysiwyg ol li {
+  margin-bottom: 5px; /* Add spacing between list items */
+  line-height: 1.6; /* Set line height for readability */
+}
+
+/* Customize nested lists */
+.jodit-wysiwyg ul ul, .jodit-wysiwyg ol ol {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 20px; /* Increase indentation for nested lists */
+  list-style-type: circle; /* Change bullet style for nested unordered lists */
+}
+
+/* Customize deeply nested lists */
+.jodit-wysiwyg ul ul ul, .jodit-wysiwyg ol ol ol {
+  list-style-type: square; /* Change bullet style for deeper levels */
+}
+
+
+  
+  
+  
+  
+  

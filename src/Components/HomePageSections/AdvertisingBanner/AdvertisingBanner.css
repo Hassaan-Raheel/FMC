@@ -1,0 +1,63 @@
+.advertising-banner-main-container{
+    position: relative;
+}
+.advertising-banner-body-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    padding: 20px 25px;
+}
+
+.advertising-banner-containt{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.advertising-banner-name-input{
+    display: flex;
+    width: 50%;
+    align-items: start;
+    justify-content: start;
+}
+
+.advertising-banner-name-input input{
+    width: 100%;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    font-size: var(--font-12);
+    line-height: var(--line-height-18);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--text-color);
+}
+
+.advertising-banner-upload-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FDFDFD;
+    height: 330px;
+    border: 1px solid var(--border-color);
+}
+
+.advertising-banner-image-upload-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 1px dashed #595959;
+    border-radius: 5px;
+    cursor: pointer;
+}

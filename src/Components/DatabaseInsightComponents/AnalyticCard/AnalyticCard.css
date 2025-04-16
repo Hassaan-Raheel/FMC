@@ -1,0 +1,633 @@
+.AnalyticsCard {
+  /*background: var(--containers-color);*/
+  background: var(--second-layer-bg);
+  border-radius: var(--standered-radius);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--box-shadow-regular-1);
+  text-align: center;
+}
+
+.CardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family);
+  color: var(--text-color-1);
+}
+
+.CardText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CardTitle {
+  font-size: var(--font-15);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.CardDuration {
+  font-size: 12px;
+  color: #777;
+}
+
+.CardIconContainer {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--containers-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-extra-large);
+  box-shadow: var(--box-shadow-regular-1);
+}
+
+.database-options-icon {
+  width: 40px;
+  height: 40px;
+
+}
+
+.CardValue {
+  font-size: var(--font-18);
+  color: rgb(27, 27, 27);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.CardValue > span {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgb(27, 27, 27) !important;
+}
+
+.analytic-card-value{
+  font-size: var(--font-18) !important;
+  color: rgb(27, 27, 27) !important;
+  font-weight: var(--font-weight-semi-bold) !important;
+}
+
+.CardGrowth {
+  font-size: var(--font-size-extra-small);
+  font-weight: var(--font-weight-medium);
+  padding: 1px 6px;
+  border-radius: var(--secondry-radius);
+  align-self: flex-end;
+  margin-bottom: 4px;
+}
+
+.positive {
+  color: green;
+  background: rgba(0, 255, 0, 0.1);
+  border-radius: 20px;
+}
+
+.negative {
+  color: red;
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+/*--- LeftSide Cards ---*/
+
+.ParentLayout-LeftCard01 {
+  padding: 20px;
+  /*background: var(--containers-color);*/
+  background: transparent;
+  border-radius: var(--standered-radius);
+  box-shadow: var(--box-shadow-regular-1);
+  /*border: var(--standered-border);*/
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  height: auto;
+}
+
+.LeftCard01-Row01 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Row01-Title {
+  font-size: var(--font-18);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--text-color-1);
+  line-height: 24px;
+}
+
+.Row01-Value {
+  color: rgb(27, 27, 27);
+  font-size: var(--font-size-extra-large);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+.Row-01-Growth {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color-1);
+  line-height: 14px;
+}
+
+.Row01-GrowthDetail {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  line-height: 18px;
+  padding: 4px 10px;
+  border-radius: var(--secondry-radius);
+  align-self: flex-start;
+}
+
+.GrowthSpan {
+  color: var(--text-color-1);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  line-height: 18px;
+}
+
+.positive {
+  color: green;
+  background: rgba(0, 255, 0, 0.1);
+  border-radius: 20px;
+}
+
+.negative {
+  color: red;
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.LeftCard01-Row02 {
+  margin: 25px 0;
+}
+
+.LeftCard01-Row03 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+}
+
+.LeftCard01-Row03-01 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  line-height: 16px;
+}
+
+.LeftCard01-Row03-02 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  line-height: 16px;
+}
+
+.Row03-Title {
+  color: var(--primary-color);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 18px;
+}
+
+.Row03-Value {
+  color: var(--text-color-1);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 18px;
+  margin-left: 15px;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.growth,
+.growth-detail {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.add-credit-button {
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-credit-button:hover {
+  background-color: #45a049;
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #333;
+}
+
+/* --- Right Row 02 Cards - Left Section ---- */
+
+.ParentLayout-RightRow02-Left {
+  width: 100% !important;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: transparent;
+  border-radius: var(--standered-radius);
+  box-shadow: var(--box-shadow-regular-1);
+  height: auto;
+  box-sizing: border-box;
+}
+
+.Sales-Analytics-Charts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Chart-Heading{
+  font-size: var(--font-18);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--text-color-1);
+  line-height: 24px;
+}
+
+.Chart-SubHeading{
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color-1);
+  line-height: 16px;
+}
+
+.Left-Row02 {
+  height: 350px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.chart-separator {
+  width: 100%;
+  height: 2px;
+  background-color: #f0f0f0;
+  margin: 7px 0;
+  border: none;
+}
+
+/* --- Top Product Component --- */
+
+.RatedProductCard {
+  /*background: var(--containers-color);*/
+  width: 100%;
+  border: var(--standered-border);
+  border-radius: var(--secondry-radius);
+  background: var(--third-layer-bg);
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-shadow: var(--box-shadow-regular-1);
+  text-align: center;
+}
+
+.ProductCardColumn-01 {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family);
+  color: var(--text-color-1);
+}
+
+.ProductCardColumn-02 {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family);
+  color: var(--text-color-1);
+}
+
+.ProductCardText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.ProductCardTitle {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: 20px;
+  color: var(--text-color-1);
+}
+
+.ProductCardTitleText {
+  font-size: inherit; /* Inherits from .ProductCardTitle */
+  font-weight: inherit;
+}
+
+.ProductCardSKU {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+  color: var(--text-color-1);
+}
+
+.ProductCardQuantity {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+  color: var(--text-color-1);
+}
+
+.PC-ValueColor {
+  color: var(--primary-color);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+}
+
+/* --- Order Progress Component --- */
+
+.Order-Progress-Main-Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: var(--secondry-radius);
+  background: transparent;
+  padding: 5px;
+}
+
+.Order-Progress-Body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Order-Progress-Product-Content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.Order-Progress-Product-Name-Value {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.Order-Progress-Product-Name-Value h3 {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color-1);
+}
+
+.Order-Progress-Values{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: max-content;
+  box-sizing: border-box;
+}
+
+.Order-Progress-Values p{
+  font-size: var(--font-size-small);
+  line-height: 15px;
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color-1);
+}
+
+.Order-Progress-Values span{
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: rgba(68, 87, 197, 0.1);
+  color: #4457C5;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+/*--- LeftCard02 - Best Selling Categories Components ---*/
+
+.Categories-Main-Container {
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+/*--- AnalyticsProductCard ---*/
+
+.AnalyticsProductCard {
+  /*background: var(--containers-color);*/
+  background: var(--second-layer-bg);
+  border-radius: var(--standered-radius);
+  border: var(--standered-border);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow-regular-1);
+  text-align: center;
+  width: 100%;
+}
+
+.Products-CardText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.Products-CardTitle {
+  font-size: var(--font-18);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.Products-CardDescription {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-color-1);
+}
+
+.Products-CardValue {
+  margin-top: 3px;
+  font-size: var(--font-22);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--primary-color);
+}
+
+.Products-CardVisualization {
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Visualization-LeftSide {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.Products-CardGrowth {
+  font-size: var(--font-size-extra-small);
+  font-weight: var(--font-weight-medium);
+  padding: 1px 6px;
+  border-radius: var(--secondry-radius);
+}
+
+.Products-CardIconContainer {
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary-color);
+  color: var(--containers-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-extra-large);
+  box-shadow: var(--box-shadow-regular-1);
+}
+
+/*--- Products Visualization Component ---*/
+
+.ProductVisualization-Main-Page {
+  width: 99% !important;
+  padding: 10px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--second-layer-bg);
+  border-radius: var(--standered-radius);
+  box-shadow: var(--box-shadow-regular-1);
+  height: auto;
+  box-sizing: border-box;
+  background: var(--second-layer-bg);
+}
+
+.Products-Analytics-Charts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.AnalyticsChart-Heading-Row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Ensures proper spacing */
+  align-items: center;
+  gap: 10px;
+  position: relative; /* Makes sure .chart-icons is positioned relative to this div */
+  width: 100%;
+}
+.chart-icons {
+  display: flex;
+  gap: 10px;
+  position: relative; /* Change from absolute to relative */
+  margin-right: 5px;
+}
+
+.AnalyticsChart-Heading-Column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.chart-icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s;
+}
+
+.chart-icon.active {
+  color: #1890ff; /* Active color */
+  font-weight: bold;
+}
+
+
+.analytic-card-value-shimmer-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.analytic-card-value-shimmer{
+  width: 150px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.analytic-card-value-shimmer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%; /* Start off-screen */
+    height: 100%;
+    width: 150%; /* Width of the shimmer gradient */
+    background: linear-gradient(90deg, rgba(240, 240, 240, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(240, 240, 240, 0) 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+.analytic-card-status-shimmer{
+  width: 50px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.analytic-card-status-shimmer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%; /* Start off-screen */
+    height: 100%;
+    width: 150%; /* Width of the shimmer gradient */
+    background: linear-gradient(90deg, rgba(240, 240, 240, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(240, 240, 240, 0) 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

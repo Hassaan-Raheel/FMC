@@ -1,0 +1,20 @@
+.input-field-with-label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-field-with-label input{
+    width: auto;
+    background: var(--third-layer-bg);
+    border: var(--standered-border);
+    border-radius: var(--secondry-radius);
+    outline: none;
+    padding: 10px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    line-height: 18px;
+    color: var(--text-color-1);
+}
+

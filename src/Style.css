@@ -1,0 +1,1293 @@
+
+
+
+/* Dashboard Container
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-image: url('check-images/main-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; 
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: var(--standered-backdrop);
+    backdrop-filter: var(--standered-backdrop);
+    background: #fff6;
+    background: var(--standered-bg);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    color: #988e8e;
+    color: var(--text-color);
+    font-family: Poppins, sans-serif;
+    font-family: var(--font-family);
+    flex-wrap:wrap;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    height: 100vh; 
+  
+    
+  } */
+  .dashboard-wrapper {
+    width: 100%;
+    display: flex;
+    flex-grow: 1; /* Allows content to expand */
+    overflow: hidden; /* Prevents unnecessary scrollbars */
+    }
+  
+  
+  
+  .dashboard-content {
+    position: relative; /* This ensures the content will appear on top of the background */
+    z-index: 1; /* Place content above the background */
+    padding: 10px;
+  
+  }
+   /* AdminLogin.css */
+   /* :root {
+    --standered-backdrop: blur(10px); 
+    --second-layer-bg: rgba(255, 255, 255, 0.6); 
+    --standered-radius: 8px; 
+  } */
+  
+  :root {
+    scroll-padding-top: 170px;
+  }
+  
+  .overflow-x-auto {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f4f4f4;
+    padding-bottom: 10px;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-track {
+    background: #f4f4f4;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .flex.space-x-4 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  /* === Dashboard Container === */
+  .dashboard-container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px #00000029;
+    -webkit-backdrop-filter: var(--standered-backdrop);
+    backdrop-filter: var(--standered-backdrop);
+    background: var(--second-layer-bg);
+    border-radius: var(--standered-radius);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #595959;
+    scrollbar-width: thin;
+  }
+  .dashboard-container2 h3{
+  margin:0px;
+  }
+  .total .total-details h3 {
+    margin: 20px 0px 0px 10px !important;
+    }
+  /* === Posts Section === */
+  .posts-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  
+  /* === Facebook Posts === */
+  .facebook-posts {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-top:0px
+  }
+  
+  /* === Posts Wrapper (Horizontal Scroll) === */
+  .posts-wrapper {
+    display: flex;
+    gap: 1.5rem; /* Space between cards */
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f4f4f4;
+  }
+  
+  /* === Post Card === */
+  .post-card {
+    min-width: 280px;
+    max-width: 300px;
+    background: white;
+    padding: 1rem;
+    border-radius: var(--standered-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* === Post Details === */
+  .post-time {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  /* === Post Message (Fix Overflow) === */
+  .post-message {
+    font-size: 1rem;
+    word-wrap: break-word; /* Ensures long words break properly */
+    white-space: normal; /* Allows text wrapping */
+    overflow: hidden; /* Prevents text from spilling out */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+    max-height: 4rem; /* Limits height (optional) */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow-y: auto; /* Makes it scrollable */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ccc transparent; /* Scrollbar color */
+  }
+  
+  
+  /* === Post Image === */
+  .post-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+  
+  /* === Post Meta (Likes, Comments, Shares) === */
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #777;
+  }
+  
+  /* === Facebook Link === */
+  .post-link {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    color: #1877f2;
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+  
+  post-message {
+    overflow: hidden;
+    white-space: pre-line;
+  }
+  
+
+
+  .collapsed {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Show only 4 lines */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  
+  .expanded {
+    max-height: 80px;
+    overflow: auto;
+  }
+  
+  .see-more-text {
+    font-weight: normal;
+    display: inline;
+  }
+  
+  
+  .margin-top
+  {
+    margin-top: 20px;
+  }
+  
+  .mt-4
+  {
+    margin-top: 20px;
+  }
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: var(--standered-backdrop);
+    backdrop-filter: var(--standered-backdrop);
+    background: rgba(255, 255, 255, 0.8);
+    background-size: 100vw 100vh;
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    color: #988e8e;
+  }
+  .navbar h4
+  {
+  margin:15px;
+  }
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-center {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .search-bar .icon {
+    margin-right: 8px;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-center h1{
+    color:#595959;
+    display: flex;
+    justify-content: left;
+  
+  }
+  .profile-info {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  
+  .profile-info span {
+    margin-right: 10px;
+  }
+  
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+    /* White Box with Opacity */
+  /* Sidebar Styling */
+  .sidebar {
+    width: 290px;
+    background: rgba(255, 255, 255, 0.6); /* Make background semi-transparent */
+    color: #333; /* Ensure text is readable */
+    padding-top: 20px;
+    padding:10px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    padding-top: 20px;
+    position: relative; /* Prevent it from floating */
+    height: 100vh; /* Full viewport height */
+      overflow-y: auto; /* Enables vertical scrolling */
+      overflow-x: hidden; /* Prevents horizontal scrolling */
+      scrollbar-width: thin; /* Makes scrollbar thinner */
+      scrollbar-color: transparent #f1f1f1; /* Custom scrollbar color */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      
+  }
+  
+  
+  .menu-text {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+  }
+  
+  .icon {
+    flex-shrink: 0;
+  }
+  .sidebar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .sidebar-menu-container {
+    height: calc(100vh - 60px); /* Adjust based on header/logo size */
+    overflow-y: auto;
+    padding-bottom: 10px; /* Avoid cutoff at the bottom */
+  }
+  
+  /* Hide scrollbar */
+  .sidebar-menu-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  
+  .sidebar-menu-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .dropdown-icon {
+    margin-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    width: 30px;
+    height: 20px;
+  
+  }
+  .icon-right {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+    .sidebar-menu li,
+  .submenu-list li {
+    cursor: pointer;
+  }
+  
+  /* Optional: Style when hovering over the list items */
+    .sidebar-menu {
+      list-style-type: none;
+      padding: 20px 0px;
+    }
+    
+    .sidebar-menu li {
+      margin: 0px 0;
+      padding-left: 50px 0px;
+      
+    }
+    .adsreportbutton
+    {
+      padding:0px;
+      margin: 0px;
+      display: flex;
+      justify-content: flex-start;
+      text-decoration: none;
+      color: #777777;
+      font-size: 15px;
+      font-weight: 500;
+      display: block;
+      padding: 0px 5px 10px 2px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      align-items: center; /* Vertically align the icon and text */
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      text-align: center;
+  
+    }
+  
+  
+    .sidebar-link {
+      text-decoration: none;
+      color: #777777;
+      font-size: 15px;
+      font-weight: 500;
+      display: block;
+      padding: 12px 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-bottom:20px;
+      align-items: center; /* Vertically align the icon and text */
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: background 0.3s;
+      width: 235px;
+    }
+    .sidebar-menu li {
+      position: relative;
+      list-style: none;
+  }
+    /* Smooth transition for submenu items */
+  .submenu-list li .sidebar-link.active::after {
+    right: -5px; /* Adjust for submenus */
+    width: 3px;
+  }
+    /* Active state for the link */
+    .sidebar-link.active {
+      background-color:#83afd7;
+      color:white;
+      
+      
+    }
+    .sidebar-link.active::after {
+      background-color:#83afd7;
+      color:white;
+      content: "";
+      position: absolute;
+      right: -10px; /* Adjust to control position */
+      top: 10%;
+      bottom: 10%;
+      width: 5px; /* Adjust width */
+      border-radius: 10px 0 0 10px;
+      opacity: 1;
+      transition: opacity 0.3s;
+  }
+  .submenu-list li .sidebar-link.active::after {
+    right: -5px; /* Adjust for submenus */
+    width: 3px;
+  }
+    
+    /* Hover effect for links */
+    .sidebar-link:hover {
+      background-color:#4487c5;
+      color: white;
+    }
+    
+    /* Submenu Styling */
+    .submenu-list {
+      list-style-type: none;
+      padding: 0;
+      margin-left: 10px;
+      display: block;
+    }
+    
+    .submenu-list li {
+      margin: 10px 0;
+    }
+    
+    /* Main Content Area */
+    .main-content {
+      margin-left: 20px; /* Space for the sidebar */
+      padding: 0px;
+      width: calc(100% - 250px);
+      background-color: transparent;
+      flex-grow: 1; /* Content will take up remaining space */
+      padding:0px;
+      overflow-y: auto; /* Make the content scrollable */
+      height: 100vh; /* Ensure content fills the viewport */
+  scrollbar-width: none;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+          width: 200px;
+      }
+  }
+  @media (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* Sidebar takes full width on very small screens */
+        height: auto;
+    }
+  
+    .main-content {
+        margin-left: 0; /* No left margin when sidebar is full width */
+    }
+  }
+    /* Content Section for Facebook/Instagram pages */
+    .content-section {
+      padding: 20px;
+    }
+    
+    .content-section h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }  
+    /* CSS to disable the highlight for Home */
+  /* Ensure Home menu doesn't get highlighted */
+  .sidebar-link.no-highlight {
+      color: inherit; /* Keeps the same color */
+      font-weight: normal; /* No bolding */
+      background-color: transparent; /* Removes background color change */
+    }
+    
+    /* Optional: Remove active styles when hovering over Home */
+    .sidebar-link.no-highlight:hover {
+      background-color: transparent;
+    }
+    
+    .pdf-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pdf-button:hover {
+      background-color: #0056b3;
+    }
+    
+  /* Nav Styling for the top bar */
+  .nav-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgb(158, 47, 47);
+      padding: 12px 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(241, 226, 226, 0.1);
+  }
+  
+  /* Adjust the margin-top for the page content to not overlap the top navigation */
+  .spacer {
+      margin-top: 80px; /* Adjust this value to match the height of your navbar */
+  }
+  
+  
+  
+  /* Loader CSS */
+  .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 60px; /* Slightly larger size for better visibility */
+      height: 60px; /* Slightly larger size for better visibility */
+      animation: spin 1.5s linear infinite; /* Faster rotation for more dynamic feel */
+      position: absolute; /* Center it absolutely */
+      top: 20%;
+      left: 45%;
+      transform: translate(-50%, -50%); /* Ensure it's perfectly centered */
+  }
+  
+  /* Keyframes for Spinner Animation */
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+  
+  /* Apply a Professional Font */
+
+  /* Card Styling */
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 580px; /* Set a fixed height for uniformity */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #595959;;
+  }
+  .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Image Styling */
+  .card img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 270px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Text Styling */
+  .card p {
+    color: #595959;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: justify;
+    max-height: 90px; /* Limit height but allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 8px; /* Prevent text from touching the edge */
+  }
+  .card p::-webkit-scrollbar {
+    width: 6px;
+  }
+  .card p::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+  }
+  .card a {
+    color: #595959;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .card a:hover {
+      text-decoration: underline;
+  }
+  
+  /* Title and Header Styling */
+  /* h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      /* margin-top: 6rem; */
+      /* color: #595959;
+      box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+      /* -webkit-backdrop-filter: var(--standered-backdrop); Safari support for backdrop-filter */
+      /* backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+      /* background: var(--second-layer-bg); /* Your custom transparent background */
+      /* border-radius: var(--standered-radius); Smooth corners */
+      /* box-sizing: border-box;
+      padding: 12px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(241, 226, 226, 0.1);
+      display: flex;
+      justify-content: left;
+      text-transform: uppercase;
+  }  */
+  
+  /* Card Container Grid Layout */
+  .gridm {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem; /* Increased gap between cards */
+      margin-top: 1rem;
+      padding: 0 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+      -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+      backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+      background: var(--second-layer-bg); /* Your custom transparent background */
+      border-radius: var(--standered-radius); /* Smooth corners */
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #595959;;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+      .gridm {
+          grid-template-columns: repeat(2, 3fr);
+      }
+  }
+  
+  .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+  }
+  
+  /* Insights container styling */
+  .card .insights {
+      margin-top: 1rem;
+  }
+  
+  /* Insights label styling */
+  .card .insights p {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    
+  }
+  
+  /* Grid layout for insights */
+  .card .insights .gridm {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+  }
+  
+  /* Individual insight box */
+  .card .insights .box {
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fafafa;
+  }
+  
+  /* Insight title in the box */
+  .card .insights .box .label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #595959;;
+      margin-bottom: 0.25rem;
+  }
+  
+  
+  /* Insight value in the box */
+  .card .insights .box .value {
+      font-size: 0.875rem;
+      color: #666;
+  }
+  
+  /* Special box for video views */
+  .card .insights .video-box {
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fafafa;
+      color: black;
+  }
+  
+  .card .insights .label{
+      color: black;
+  }
+  
+  .card .insights .value{
+      color: rgb(48, 48, 48);
+  }
+  
+  /* Styling the "No insights available" message */
+  .card .insights .no-insights {
+      font-size: 0.875rem;
+      color: #595959;
+  }
+  .card .insights {
+    max-height: 200px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Add some space for scrollbar */
+  }
+  
+  /* Scrollbar Styling */
+  .card .insights::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .card .insights::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+  }
+  
+  
+  .no-image {
+      text-align: center;
+      color: #777;
+      font-size: 18px;
+      font-weight: 500;
+  }
+  
+  .loader {
+      border: 4px solid #f3f3f3; /* Light gray background */
+      border-top: 4px solid #3498db; /* Blue color for the spinning part */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+  /* General styling for the logo container */
+  .logo-container {
+      text-align: center; /* Center the logo horizontally */
+      padding: 0px; /* Optional padding around the logo */
+      
+    }
+    
+    /* Styling for the logo */
+    .logo {
+      width: 180px; /* Adjust logo width */
+      height: auto; /* Maintain the aspect ratio */
+      opacity: 1; /* Set opacity to fully visible */
+      border: 2px solid #fff; /* Optional: White border around the logo */
+      border-radius: 2px; /* Optional: Rounded corners */
+      background-color: rgba(255, 255, 255, 0.3); /* Optional: Semi-transparent background */
+      transition: opacity 0.3s ease;
+      padding: 5px; /* Smooth transition for opacity on hover */
+    }
+    
+    /* Hover effect for logo */
+    .logo:hover {
+      opacity: 0.8; /* Slight opacity change when hovering */
+    }
+    
+    /* Responsive design for logo */
+    @media (max-width: 768px) {
+      .logo {
+        width: 120px; /* Adjust the logo width on medium screens */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo {
+        width: 100px; /* Further adjust the logo width for mobile screens */
+      }
+    }
+   /* Date filter container styling */
+  .date-filter-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      justify-content: center;
+      gap: 10px;
+      color: #595959;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: var(--standered-backdrop);
+      backdrop-filter: var(--standered-backdrop);
+      background: #fff6;
+      background: var(--standered-bg);
+    }
+    
+    /* Style for the date input fields */
+    .date-input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 150px;
+      color: #595959;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: var(--standered-backdrop);
+      backdrop-filter: var(--standered-backdrop);
+      background: #fff6;
+      background: var(--standered-bg);
+      
+    }
+    
+    /* Style for the 'to' text between date fields */
+    .date-text {
+      font-size: 16px;
+      font-weight: 500;
+      color: #595959;
+    }
+    
+    /* Hover effect for the input fields */
+    .date-input:hover {
+      border-color: #007bff;
+     background-color: white;
+    }
+    
+    /* Focus effect for the input fields */
+    .date-input:focus {
+      outline: none;
+      border-color: #007bff;
+      background-color: #ffffff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 600px) {
+      .date-filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .date-input {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    
+      .date-text {
+        margin: 0 0 8px 0;
+      }
+    }
+    /* Styling for the select dropdown */
+  select {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 150px; /* Adjust width as needed */
+      transition: border-color 0.3s ease;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: var(--standered-backdrop);
+      backdrop-filter: var(--standered-backdrop);
+      background: #fff6;
+      background: var(--standered-bg);
+  }
+  
+  /* Hover effect for the select dropdown */
+  select:hover {
+      border-color: #007bff;
+  
+  }
+  
+  /* Focus effect for the select dropdown */
+  select:focus {
+      outline: none;
+      border-color: #007bff;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: var(--standered-backdrop);
+      backdrop-filter: var(--standered-backdrop);
+      background: rgba(0, 0, 0, 0.4);
+      background: var(--standered-bg);
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Styling for the individual option items */
+  select option {
+      padding: 8px;
+      font-size: 14px;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: var(--standered-backdrop);
+      backdrop-filter: var(--standered-backdrop);
+      background: #fff6;
+      background: var(--standered-bg);
+  }
+  
+  /* Apply margin-right for spacing between input and select */
+  .mr-4 {
+      margin-right: 16px;
+      margin-bottom: 20px;
+  }
+  .engagement-metrics {
+        display: flex;
+        justify-content: start;
+        gap: 15px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        color: #595959; /* Change text color to white */
+  }
+  
+  .engagement-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and number */
+  }
+  
+  .filter{
+    display: flex;
+    gap: 10px; /* Add space between buttons and inputs */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 1rem 0rem 0rem 3rem;
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #595959;;
+  
+  }
+  .quick-filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    
+  }
+  .quick-filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .filter-btn {
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    color: #595959;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+  
+  .filter-btn:hover {
+    background-color: #4487c5;
+    color: white;
+  }
+  
+  .clear-filter-btn
+  {
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */ /* Smooth corners */
+    box-sizing: border-box;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+  
+  
+  /* Active Button Style */
+  .filter-btn.active {
+    background-color:  #4487c5;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .date-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: var(--standered-backdrop);
+    backdrop-filter: var(--standered-backdrop);
+    background: #fff6;
+    background: var(--standered-bg);
+  }
+  
+  .date-input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .p-4 {
+    /* padding: 0px 0px !important; */
+    width:100%;
+    padding: 0px 30px 20px 20px;
+    margin: 20px 0px 15px 0px;
+  }
+  .p-5 {
+    padding: 20px 10px !important;
+  
+  }
+  
+  .p-6{
+    margin-top: 105px;
+  }
+  
+  .grid h3{
+    margin: 0px;
+  }
+  
+  .sticky-nav-container {
+    position: fixed;
+    display: flex;
+    overflow-x: auto;
+    margin-top: 5px;
+    box-shadow: 0 1px 4px #00000029; /* Subtle shadow */
+    -webkit-backdrop-filter: var(--standered-backdrop); /* Safari support for backdrop-filter */
+    backdrop-filter: var(--standered-backdrop); /* Standard backdrop-filter */
+    background: var(--second-layer-bg); /* Your custom transparent background */
+    border-radius: var(--standered-radius); /* Smooth corners */
+    box-sizing: border-box;
+    z-index: 100;
+    transition: all 0.3s ease;
+    padding: 0 1.5rem;
+    color: black;
+    width: 1335px;
+    gap:10px;
+    padding:5px 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap:10px;
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+  
+  }
+  
+  
+  .sticky-nav {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    gap: 5px;
+   
+  }
+  
+  .tab_button {
+    padding: 8px 16px;
+    white-space: nowrap;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    background: #f5f5f5; /* Default background */
+    color: black;
+  }
+  
+  .tab_button:hover {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .tab_button.active {
+    background: #3b82f6 !important; /* Ensure it's applied */
+    color: white !important;
+  
+  }
+
+  .sticky-nav-container, .sticky-nav {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.sticky-nav-container::-webkit-scrollbar, 
+.sticky-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+/* For WebKit browsers (Chrome, Safari) */
+.sticky-nav-container::-webkit-scrollbar, 
+.sticky-nav::-webkit-scrollbar {
+    height: 6px; /* Thin horizontal scrollbar */
+}
+
+.sticky-nav-container::-webkit-scrollbar-track, 
+.sticky-nav::-webkit-scrollbar-track {
+    background: #f5f5f5; /* Light gray background */
+    border-radius: 10px;
+}
+
+.sticky-nav-container::-webkit-scrollbar-thumb, 
+.sticky-nav::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* Blue thumb */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.sticky-nav-container::-webkit-scrollbar-thumb:hover, 
+.sticky-nav::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Darker blue on hover */
+}
+
+/* Firefox scrollbar */
+.sticky-nav-container, .sticky-nav {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #3b82f6 #f5f5f5; /* Thumb color and track color */
+}
+/* WebKit Browsers (Chrome, Safari) */
+.sticky-nav-container::-webkit-scrollbar, 
+.sticky-nav::-webkit-scrollbar {
+    height: 8px; /* Slightly thicker for better visibility */
+    border-radius: 10px;
+    background: transparent; /* Transparent track */
+}
+
+/* Scrollbar Track */
+.sticky-nav-container::-webkit-scrollbar-track, 
+.sticky-nav::-webkit-scrollbar-track {
+    background: #f5f5f5; /* Light gray for visibility */
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+/* Scrollbar Thumb (Handle) */
+.sticky-nav-container::-webkit-scrollbar-thumb, 
+.sticky-nav::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #3b82f6, #2563eb); /* Gradient blue */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.sticky-nav-container::-webkit-scrollbar-thumb:hover, 
+.sticky-nav::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #2563eb, #1e40af); /* Darker blue on hover */
+    transform: scaleY(1.2); /* Slightly enlarges */
+}
+
+/* Active (While Dragging) */
+.sticky-nav-container::-webkit-scrollbar-thumb:active, 
+.sticky-nav::-webkit-scrollbar-thumb:active {
+    background: #1e40af; /* Deepest blue when grabbed */
+}
+
+/* Firefox Scrollbar */
+.sticky-nav-container, .sticky-nav {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #3b82f6 #f5f5f5; /* Blue thumb, light track */
+}
+
+.sticky-nav-container::-webkit-scrollbar-thumb:active, 
+.sticky-nav::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(45deg, #1e40af, #172554) !important; /* Force deeper color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+    transform: scaleY(1.3); /* Slightly enlarge for better interaction */
+}
+

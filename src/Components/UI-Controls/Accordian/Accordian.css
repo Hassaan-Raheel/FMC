@@ -1,0 +1,132 @@
+.accordion-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: var(--box-shadow-regular-1);
+  border-radius: var(--secondry-radius);
+}
+
+.accordion-header {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color-1);
+  font-family: var(--font-family);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semi-bold);
+  background: var(--third-layer-bg);
+}
+
+.accordion-content-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
+}
+
+.accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  font-family: var(--font-family);
+  background: var(--second-layer-bg);
+  font-size: var(--font-size-large);
+  color: var(--text-color-1);
+  margin-top: 3px;
+}
+
+.accordion-content-wrapper.show {
+  max-height: 1000px;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(360deg);
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+.attribute-accordion-container {
+  width: 99%;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.attribute-accordion-header {
+  background: var(--second-layer-bg);
+  border-radius: 4px 4px 0 0;
+  border: var(--standered-border);
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color-1);
+  font-family: var(--font-family);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.attribute-accordion-content-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
+}
+
+.attribute-accordion-content {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 3px !important;
+  background: var(--second-layer-bg);
+  border: var(--standered-border);
+  border-radius: 0 0 4px 4px;
+  box-shadow: var(--box-shadow-regular-1);
+  color: var(--text-color-1);
+}
+
+.attribute-accordion-content-wrapper.show {
+  max-height: 1500px;
+}
+
+.attribute-accordion-actions {
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn {
+  width: auto;
+  height: 15px;
+  margin-right: 10px;
+  color: black;
+  object-fit: contain;
+}
+
+.attribute-accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.attribute-accordion-icon.rotate {
+  transform: rotate(360deg);
+}
+
+.edit-text {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: var(--font-size-small);
+  transition: transform 0.7s ease;
+}
+
+.edit-text.rotate {
+  transform: none;
+}

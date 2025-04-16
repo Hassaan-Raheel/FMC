@@ -1,0 +1,141 @@
+import React, { useState, useEffect } from "react";
+import Chart from "react-apexcharts";
+
+const BasicAreaChart = ({
+  data,
+  chartTitle,
+  chartSubtitle,
+  yAxisPosition = "right",
+  strokeType = "straight",
+  chartColor = "#008FFB",
+  chartWidth = 400,
+  chartHeight = 350,
+  xAxisLabelSpacing = 0,
+  yAxisLabelSpacing = 0,
+  legendSpacing = 10,
+  xAxisMin = undefined,
+  xAxisMax = undefined,
+  xAxisTickAmount = 6,
+}) => {
+  // State to store selected period
+  const [selectedPeriod, setSelectedPeriod] = useState("monthly");
+
+  // Helper function to format date
+  const formatDate = (val) => {
+    const date = new Date(val);
+    const options = { year: "2-digit", month: "short" };
+    return date.toLocaleDateString("en-US", options);
+  };
+
+  // Function to filter data based on selected period
+  const getFilteredData = (period) => {
+    const labels = data?.labels || [];
+    let filteredLabels = [];
+    let filteredSeriesData = [];
+
+    if (period === "monthly") {
+      // Use all data for monthly
+      filteredLabels = labels.slice(0, 6); // For 6 months, you can adjust as needed
+      filteredSeriesData = data?.seriesData.slice(0, 6);
+    } else if (period === "quarterly") {
+      // Example: Show every 3rd month (quarterly)
+      filteredLabels = labels.filter((_, idx) => idx % 3 === 0);
+      filteredSeriesData = data?.seriesData.filter((_, idx) => idx % 3 === 0);
+    } else if (period === "semi-annually") {
+      // Example: Show every 6th month (semi-annually)
+      filteredLabels = labels.filter((_, idx) => idx % 6 === 0);
+      filteredSeriesData = data?.seriesData.filter((_, idx) => idx % 6 === 0);
+    } else if (period === "annually") {
+      // Example: Show every 12th month (annually)
+      filteredLabels = labels.filter((_, idx) => idx % 12 === 0);
+      filteredSeriesData = data?.seriesData.filter((_, idx) => idx % 12 === 0);
+    }
+
+    return { filteredLabels, filteredSeriesData };
+  };
+
+  const { filteredLabels, filteredSeriesData } = getFilteredData(selectedPeriod);
+
+  const options = {
+    chart: {
+      type: "area",
+      height: chartHeight,
+      width: chartWidth,
+      zoom: {
+        enabled: true,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      curve: strokeType,
+    },
+    title: {
+      text: chartTitle || "Fundamental Analysis of Stocks",
+      align: "left",
+    },
+    subtitle: {
+      text: chartSubtitle || "Price Movements",
+      align: "left",
+    },
+    labels: filteredLabels,
+    xaxis: {
+      type: "datetime",
+      tickAmount: xAxisTickAmount,
+      labels: {
+        offsetX: xAxisLabelSpacing,
+        show: true,
+        formatter: formatDate,
+      },
+    },
+    yaxis: {
+      opposite: yAxisPosition === "right" ? true : false,
+      labels: {
+        offsetX: yAxisLabelSpacing,
+      },
+    },
+    legend: {
+      horizontalAlign: "right",
+      itemMargin: {
+        horizontal: legendSpacing,
+      },
+    },
+    colors: [chartColor],
+  };
+
+  return (
+    <div>
+      <div style={{ textAlign: "right", marginBottom: "10px" }}>
+        <select
+          value={selectedPeriod}
+          onChange={(e) => setSelectedPeriod(e.target.value)}
+        >
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="semi-annually">Semi-Annually</option>
+          <option value="annually">Annually</option>
+        </select>
+      </div>
+      <Chart
+        options={options}
+        series={[{ name: "STOCK ABC", data: filteredSeriesData || [] }]}
+        type="area"
+        height={chartHeight}
+        width={chartWidth}
+      />
+    </div>
+  );
+};
+
+export default BasicAreaChart;
+
+
+<BasicAreaChart
+        data={chartData} // Pass data to the chart
+        chartTitle="Stock Price Trend"
+        chartSubtitle="Price Movement Over Time"
+        chartColor="#FF5733" // Optional: Customize the chart color
+        chartWidth={400} // Optional: Customize chart width
+        chartHeight={400} // Optional: Customize chart height
+      />

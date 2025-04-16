@@ -1,0 +1,106 @@
+.server-logs-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+}
+
+.server-logs-card-and-chart-section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
+
+.server-logs-cards-and-head{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    gap: 35px;
+}
+
+.server-log-head-section{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    padding: 13px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+}
+
+.server-log-head-section > h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.server-log-cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.server-logs-chart-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 212px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    
+}
+
+.server-log-chart-icons-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.server-log-icon{
+    font-size: 18px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.server-log-icon.active-chart-icon {
+    color: #4487C5;
+}
+
+
+.server-logs-table-section{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cFnBPc .hxydeb {
+    z-index: 999999999;
+}
+
+/* .cFnBPc .htmdXE{
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+} */

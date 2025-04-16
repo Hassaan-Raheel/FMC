@@ -1,0 +1,21 @@
+.custom-btn .plus-btn {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .custom-btn .import-btn {
+    width: 18px;
+    height: 18px;
+    padding-top: 2px;
+  }
+
+  .custom-btn .export-btn {
+    width: 18px;
+    height: 18px;
+    padding-top: 2px;
+  }
+
+  .custom-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }

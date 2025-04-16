@@ -1,0 +1,113 @@
+.Search-Select-Field {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    gap: 15px;
+    background: var(--third-layer-bg);
+    border-radius: var(--secondry-radius);
+}
+
+.suggestion-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-width: 64%; 
+    box-sizing: border-box;
+    background: var(--second-layer-bg);
+    border: var(--standered-border);
+    border-radius: var(--secondry-radius);
+    z-index: 10;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-top: 3px;
+}
+
+.suggestion-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.suggestion-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.suggestion-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.suggestion-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.suggestion-list {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.suggestion-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-list li:hover {
+    background: rgba(68, 135, 197, 0.65) !important;
+    color: var(--containers-color);
+}
+
+.selected-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* --------------------------------- */
+
+  .selected-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    padding: 2px;
+    min-height: 32px;
+    background: var(--third-layer-bg);
+    border: var(--standered-border);
+    border-radius: var(--secondry-radius);
+  }
+  
+  .selected-item-tag {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+  }
+  
+  .remove-tag {
+    margin-left: 5px;
+    cursor: pointer;
+    color: red;
+  }
+
+.AttributeData-Field {
+  flex: 1;
+  padding: 5px;
+  width: 65%;
+  height: 18px;
+  outline: none;
+  border: none;
+}
+
+.AttributeData-Field::placeholder {
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--text-color);
+  }

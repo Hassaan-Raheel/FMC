@@ -1,0 +1,65 @@
+/* Flex container for displaying the cover image and insights side by side */
+.cover-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between cover image and insights */
+}
+
+/* Left side: Cover Image */
+.cover-card {
+    flex: 3; /* Adjusted flex to make the cover image take more space */
+    height: 352px; /* Fixed height for consistency */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #e9e9e9;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    /* object-fit: ; */
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.no-image {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Right side: Insights */
+.insights-card {
+    flex: 1; /* Adjusted flex to make insights take less space */
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.insight-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.insight-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Loader Style */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,154 @@
+.financing-slider-main-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px 20px 25px;
+    width: 100%;
+    gap: 20px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+.financing-slider-inner-body{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #FDFDFD;
+    box-shadow: 0px 1px 4px 0px #00000026;
+    border: 1px solid #FFF;
+    height: 260px;
+}
+
+.financing-banner-selected-image-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.financing-banner-selected-image-delete-btn{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 999;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #595959;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+.financing-banner-selected-image-delete-btn img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.financing-banner-image{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.financing-banner-image-border{
+    border: 1px dashed #595959;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.financing-banner-image-border img{
+    width: auto;
+    height: 54px;
+    object-fit: contain;
+}
+
+.financing-slider-mobile-image-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #FDFDFD;
+    box-shadow: 0px 1px 4px 0px #00000026;
+    border: 1px solid #FFF;
+    height: 200px;
+}
+
+.financing-mobile-banner-heading{
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 500;
+}
+
+.financing-banner-mobile-image-border{
+    border: 1px dashed #595959;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.financing-banner-selected-mobile-image-container{
+    display: flex;
+    width: max-content;
+    height: 100%;
+    position: relative;
+}
+
+.financing-banner-selected-mobile-image-delete-btn{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 999;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #595959;
+    outline: none;
+    cursor: pointer;
+}
+
+.financing-banner-selected-mobile-image-delete-btn img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.financing-banner-mobile-image{
+    width: auto;
+    height: 150px;
+    /* object-fit: contain; */
+}
+
+
+.active-sale-content2{
+    background-color: #fff !important;
+    border-top: 1px solid var(--border-color);
+}

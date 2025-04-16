@@ -1,0 +1,27 @@
+[
+    {
+        "id":"1",
+        "name":"Upholstery Material",
+        "image":"/uploads/productFeatures/upholstery_material.svg"
+    },
+    {
+        "id":"2",
+        "name":"Material",
+        "image":"/uploads/productFeatures/materials.svg"
+    },
+    {
+        "id":"3",
+        "name":"# of Pillows",
+        "image":"/uploads/productFeatures/pillows.svg"
+    },
+    {
+        "id":"4",
+        "name":"Seat Depth",
+        "image":"/uploads/productFeatures/seat_1.svg"
+    },
+    {
+        "id":"5",
+        "name":"Seat Cushion Style",
+        "image":"/uploads/productFeatures/seat_2.svg"
+    }
+]

@@ -1,0 +1,112 @@
+.parentHeadClass {
+  height: 50px;
+  margin: 0 30px;
+  padding: 0;
+  border-radius: var(--standered-radius);
+  background: var(--second-layer-bg);
+  display: flex;
+  box-shadow: var(--box-shadow-regular-1);
+  flex-shrink: 0;
+}
+
+.categoryClass {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-size-large);
+  color: var(--text-color-1);
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.authSection {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-size-medium);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.notifierImage {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.framerImage {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.furnitureMeccaText {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-medium);
+  color: var(--text-color-1);
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.furnitureMeccaText:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.Logout-Btn {
+  height: 25px;
+  width: auto;
+  color: black;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.Logout-Btn:hover {
+  color: #C61B1A;
+  font-weight: bolder;
+}
+
+.username {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.userDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 180%;
+  right: 0;
+  margin-right: -12px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 999999;
+  min-width: 150px;
+  border-radius: 4px;
+}
+
+.HandleLogout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.HandleLogout:hover {
+  text-decoration: underline;
+  color: #C61B1A;
+}

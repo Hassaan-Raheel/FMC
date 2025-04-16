@@ -1,0 +1,161 @@
+.SliderBody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    background: #FFFFFF;
+    padding: 20px 25px 10px 25px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.upload-image-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: var(--font-15);
+    line-height: var(--line-height-22);
+    font-weight: var(--font-weight-medium);
+    color: #595959;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-icon-div{
+    border: 1px dashed #595959;
+    padding: 27px 30px;
+    cursor: pointer;
+}
+
+.SliderBodySliderMain{
+    display: flex;
+    width:  100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.SliderBodySelectedImagesSlider{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+
+.image-slider-image-delete{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 0px;
+    right: 0px;
+    background-color: #fff;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 22px;
+    height: 22px;
+}
+
+.image-slider-image-delete img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-slider-image {
+    width: 100%;
+    height: auto;
+}
+
+.SliderAddNewImageBtnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pagination-dots-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.pagination {
+    text-align: center;
+    display: flex;
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.dot.active {
+    background-color: gray;
+}
+
+.add-new-image-btn{
+    font-size: var(--font-15);
+    line-height: var(--line-height-22);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--secondry-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: transparent;
+    padding: 5px 15px;
+    border: 1px dashed #595959;
+    border-radius: 25px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.SliderAddNewImageBtnDiv.show-add-more-btn{
+    display: none;
+}
+
+.add-new-image-btn img{
+    width: auto;
+    height: 10px;
+    object-fit: contain;
+}
