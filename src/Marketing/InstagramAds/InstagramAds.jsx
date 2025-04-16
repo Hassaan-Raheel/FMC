@@ -5,7 +5,16 @@ import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, Resp
 import { site_url } from "../../Services/Api";
 import '../MetaAds/Metaads.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { FaThumbsUp, FaEye, FaShareAlt, FaMoneyBillWave, FaPlayCircle } from 'react-icons/fa'; // Example icons from react-icons
+import { 
+  FaEye, 
+  FaMousePointer, 
+  FaChartLine, 
+  FaDollarSign, 
+  FaUsers, 
+  FaPlayCircle,
+  FaInfoCircle 
+} from 'react-icons/fa';
+// import { FaThumbsUp, FaEye, FaShareAlt, FaMoneyBillWave, FaPlayCircle } from 'react-icons/fa'; // Example icons from react-icons
 import {
   Accordion,
   AccordionItem,
@@ -16,13 +25,25 @@ import {
 import "react-accessible-accordion/dist/fancy-example.css"; 
 import { Tabs, Tab, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-const iconMapping = {
-  impressions: "fas fa-eye", // Example FontAwesome icons
-  clicks: "fas fa-mouse-pointer",
-  ctr: "fas fa-percentage",
-  spend: "fas fa-dollar-sign",
-  reach: "fas fa-chart-line",
-};
+// const iconMapping = {
+//   impressions: "fas fa-eye", // Example FontAwesome icons
+//   clicks: "fas fa-mouse-pointer",
+//   ctr: "fas fa-percentage",
+//   spend: "fas fa-dollar-sign",
+//   reach: "fas fa-chart-line",
+// };
+  const iconMapping = {
+    impressions: <FaEye />,
+    clicks: <FaMousePointer />,
+    ctr: <FaChartLine />,
+    spend: <FaDollarSign />,
+    reach: <FaUsers />,
+    video_views: <FaPlayCircle />,
+    // Default icon
+    default: <FaInfoCircle />
+  };
+  
+
 
 const { Panel } = Collapse;
 const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042"];
@@ -62,7 +83,7 @@ const MetaAdsInsights = ({}) => {
         console.error("There was an error fetching the data!", error);
         setLoading(false);
       });
-  }, [setPageTitle]);
+  }, []);
 
   // Handle filter changes
   const handleFilterChange = (name, value) => {
@@ -171,7 +192,7 @@ const MetaAdsInsights = ({}) => {
             <p className="value text-xs">{clicks}</p>
               </div>
               <div className='icon-container'>
-              <i className='fas fa-mouse-pointer'></i>
+        <FaMousePointer/>
               </div>
             </div>
           </div>
@@ -182,7 +203,7 @@ const MetaAdsInsights = ({}) => {
             <p className="value text-xs">{cpc}</p>
               </div>
               <div className='icon-container'>
-              <i className='fas fa-info-circle'></i>
+             <FaInfoCircle/>
               </div>
             </div>
           </div>
@@ -193,7 +214,7 @@ const MetaAdsInsights = ({}) => {
             <p className="value text-xs">{ctr}</p>
               </div>
               <div className='icon-container'>
-              <i className='fas fa-chart-line'></i>
+              <FaChartLine/>
               </div>
             </div>
           </div>
@@ -204,7 +225,7 @@ const MetaAdsInsights = ({}) => {
             <p className="value text-xs">{impressions}</p>
               </div>
               <div className='icon-container'>
-              <i className='fas fa-eye'></i>
+              <FaEye/>
               </div>
             </div>
           </div>
@@ -215,7 +236,7 @@ const MetaAdsInsights = ({}) => {
             <p className="value text-xs">{reach}</p>
               </div>
               <div className='icon-container'>
-              <i className='fas fa-users'></i>
+              <FaUsers/>
               </div>
             
             </div>
@@ -227,7 +248,7 @@ const MetaAdsInsights = ({}) => {
             <p className="value text-xs">{spend}</p>
               </div>
               <div className='icon-container'>
-              <i className='fas fa-dollar-sign'></i>
+            <FaDollarSign/>
               </div>
             </div>
           </div>
@@ -689,7 +710,7 @@ const MetaAdsInsights = ({}) => {
                   </Tabs>
                 </div> */}
              {/* Meta Ads List */}
-      <div className="ads-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="ads-list gridm grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredAdsData.length > 0 ? (
           filteredAdsData.map((ad) => renderAdDetails(ad))
         ) : (

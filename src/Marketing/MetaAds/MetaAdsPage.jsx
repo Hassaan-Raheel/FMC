@@ -3,7 +3,16 @@ import axios from "axios";
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import './Metaads.css'; // Assuming the CSS is imported here or globally
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { FaThumbsUp, FaEye, FaShareAlt, FaMoneyBillWave, FaPlayCircle } from 'react-icons/fa'; // Example icons from react-icons
+// import { FaThumbsUp, FaEye, FaShareAlt, FaMoneyBillWave, FaPlayCircle } from 'react-icons/fa'; // Example icons from react-icons
+import { 
+  FaEye, 
+  FaMousePointer, 
+  FaChartLine, 
+  FaDollarSign, 
+  FaUsers, 
+  FaPlayCircle,
+  FaInfoCircle 
+} from 'react-icons/fa';
 import {
   Accordion,
   AccordionItem,
@@ -134,13 +143,24 @@ const MetaAdsPage = ({ setMetaAdCount }) => {
 
     return matchesName && matchesFilter;
   });
+  // const iconMapping = {
+  //   impressions: "fas fa-eye",
+  //   clicks: "fas fa-mouse-pointer",
+  //   ctr: "fas fa-chart-line",
+  //   spend: "fas fa-dollar-sign",
+  //   reach: "fas fa-users",
+  //   video_views: "fas fa-play-circle",
+  // };
+
   const iconMapping = {
-    impressions: "fas fa-eye",
-    clicks: "fas fa-mouse-pointer",
-    ctr: "fas fa-chart-line",
-    spend: "fas fa-dollar-sign",
-    reach: "fas fa-users",
-    video_views: "fas fa-play-circle",
+    impressions: <FaEye />,
+    clicks: <FaMousePointer />,
+    ctr: <FaChartLine />,
+    spend: <FaDollarSign />,
+    reach: <FaUsers />,
+    video_views: <FaPlayCircle />,
+    // Default icon
+    default: <FaInfoCircle />
   };
   
 
@@ -195,8 +215,12 @@ const MetaAdsPage = ({ setMetaAdCount }) => {
                   {value === "0" || !value ? "N/A" : value}
                 </p>
               </div>
-              <div className="icon-container">
+              {/* <div className="icon-container">
                 <i className={iconMapping[key] || "fas fa-info-circle"}></i>
+               
+              </div> */}
+               <div className="icon-container">
+                {iconMapping[key] || iconMapping.default}
               </div>
             </div>
           </div>
@@ -567,10 +591,10 @@ const MetaAdsPage = ({ setMetaAdCount }) => {
       <div className="tab-container">
       <Tabs>
         <TabList className="tab-list">
-          <Tab className="tab">Age</Tab>
-          <Tab className="tab">Region</Tab>
-          <Tab className="tab">Devices</Tab>
-          <Tab className="tab">Genders</Tab>
+          <Tab className="tab1 bg-white">Age</Tab>
+          <Tab className="tab1">Region</Tab>
+          <Tab className="tab1">Devices</Tab>
+          <Tab className="tab1">Genders</Tab>
         </TabList>
 
         <TabPanel className="gridmain">
@@ -736,7 +760,7 @@ const MetaAdsPage = ({ setMetaAdCount }) => {
      
 
       {/* Meta Ads List */}
-      <div className="ads-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="ads-list gridm grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredMetaAds.length > 0 ? (
           filteredMetaAds.map((ad) => renderAdDetails(ad))
         ) : (

@@ -62,7 +62,8 @@ import InstagramPostsPage from "../Marketing/Instagram/InstagramPostsPage"
 import InstagramReelsPage from "../Marketing/Instagram/InstagramReelsPage"
 import AdsReportPage from "../Marketing/AdsReports/AdsReportsPage"
 import GoogleAdsOverviewPage from "../Marketing/GoogleAds/GoogleAdsOverviewPage"
-
+import MetaAdsPage from "../Marketing/MetaAds/MetaAdsPage"
+import MetaAdsInsights from "../Marketing/InstagramAds/InstagramAds"
 /* ---Settings Section--- */
 import AllUsers from "../Pages/Users/AllUsers";
 import UserHistory from "../Pages/Settings/UserHistory";
@@ -210,6 +211,9 @@ const routes = [
   { path: "/Marketing/Covers", component: Covers , protected: true },
   { path: "/Marketing/Overview", component: AdsReportPage, protected: true },
   { path: "/Marketing/Googleads/overview", component: GoogleAdsOverviewPage, protected: true },
+  { path: "/Marketing/MetaAds/FacebookAds", component: MetaAdsPage,protected: true},
+  { path: "/Marketing/MetaAds/InstagramAds", component: MetaAdsInsights,protected: true},
+
 
   /* Integration Section */
   { path: "/Integration/Search-Console", component: SearchConsole, protected: true },

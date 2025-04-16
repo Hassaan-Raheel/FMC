@@ -3,7 +3,16 @@ import axios from "axios";
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import '../Marketing/MetaAds/Metaads.css'; // Assuming the CSS is imported here or globally
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { FaThumbsUp, FaEye, FaShareAlt, FaMoneyBillWave, FaPlayCircle } from 'react-icons/fa'; // Example icons from react-icons
+// import { FaThumbsUp, FaEye, FaShareAlt, FaMoneyBillWave, FaPlayCircle } from 'react-icons/fa'; // Example icons from react-icons
+import { 
+  FaEye, 
+  FaMousePointer, 
+  FaChartLine, 
+  FaDollarSign, 
+  FaUsers, 
+  FaPlayCircle,
+  FaInfoCircle 
+} from 'react-icons/fa';
 import { site_url } from "../Services/Api";
 import {
   Accordion,
@@ -130,15 +139,25 @@ const Facebookadsforreport = ({ setMetaAdCount }) => {
 
     return matchesName && matchesFilter;
   });
+  // const iconMapping = {
+  //   impressions: "fas fa-eye",
+  //   clicks: "fas fa-mouse-pointer",
+  //   ctr: "fas fa-chart-line",
+  //   spend: "fas fa-dollar-sign",
+  //   reach: "fas fa-users",
+  //   video_views: "fas fa-play-circle",
+  // };
   const iconMapping = {
-    impressions: "fas fa-eye",
-    clicks: "fas fa-mouse-pointer",
-    ctr: "fas fa-chart-line",
-    spend: "fas fa-dollar-sign",
-    reach: "fas fa-users",
-    video_views: "fas fa-play-circle",
-  };
-  
+      impressions: <FaEye />,
+      clicks: <FaMousePointer />,
+      ctr: <FaChartLine />,
+      spend: <FaDollarSign />,
+      reach: <FaUsers />,
+      video_views: <FaPlayCircle />,
+      // Default icon
+      default: <FaInfoCircle />
+    };
+    
 
   const renderAdDetails = (ad) => {
     const startDate =
@@ -192,7 +211,7 @@ const Facebookadsforreport = ({ setMetaAdCount }) => {
                 </p>
               </div>
               <div className="icon-container">
-                <i className={iconMapping[key] || "fas fa-info-circle"}></i>
+                {iconMapping[key] || iconMapping.default}
               </div>
             </div>
           </div>

@@ -19,17 +19,36 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 //   AccordionItemButton,
 //   AccordionItemPanel,
 // } from "react-accessible-accordion";
+import { 
+  FaEye, 
+  FaMousePointer, 
+  FaChartLine, 
+  FaDollarSign, 
+  FaUsers, 
+  FaPlayCircle,
+  FaInfoCircle 
+} from 'react-icons/fa';
+
 import "react-accessible-accordion/dist/fancy-example.css"; 
 import { Tabs, Tab, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-const iconMapping = {
-  impressions: "fas fa-eye", // Example FontAwesome icons
-  clicks: "fas fa-mouse-pointer",
-  ctr: "fas fa-percentage",
-  spend: "fas fa-dollar-sign",
-  reach: "fas fa-chart-line",
-};
-
+// const iconMapping = {
+//   impressions: "fas fa-eye", // Example FontAwesome icons
+//   clicks: "fas fa-mouse-pointer",
+//   ctr: "fas fa-percentage",
+//   spend: "fas fa-dollar-sign",
+//   reach: "fas fa-chart-line",
+// };
+  const iconMapping = {
+    impressions: <FaEye />,
+    clicks: <FaMousePointer />,
+    ctr: <FaChartLine />,
+    spend: <FaDollarSign />,
+    reach: <FaUsers />,
+    video_views: <FaPlayCircle />,
+    // Default icon
+    default: <FaInfoCircle />
+  };
 const { Panel } = Collapse;
 const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042"];
 
@@ -158,92 +177,92 @@ const MetaAdsInsights = () => {
     const spend = insight.spend || "N/A";
 
     return (
-      <div key={ad.id} className="card2 p-2 border border-gray-300 rounded-md shadow-sm">
-        {/* <div className="dates mb-2 flex space-x-4">
-          <p className="campaign-status1 text-sm font-semibold mb1">
-            <strong>Date: </strong> {startDate}
-          </p>
-          <p className="campaign-status1 text-sm font-semibold mb1">TO</p>
-          <p className="campaign-status1 text-sm font-semibold mb1">{endDate}</p>
-        </div> */}
-  
-        <p className="ad-title text-sm font-semibold mb-1"><strong>Campaign Name:</strong> {ad.name}</p>
-        <p className="campaign-name text-xs"><strong>Campaign ID:</strong> {ad.campaign_id}</p>
-        <p className="campaign-status text-xs"><strong>Status:</strong> {ad.status}</p>
-       
-        
-        <div className="insights max-h-40 overflow-auto border-t mt-2 pt-2">
-          <div className='gridmain'>
-          <div className="box">
-            <div className='info-container'>
-              <div className='text-section'>
-            <p className="label text-xs font-medium">CLICKS</p>
-            <p className="value text-xs">{clicks}</p>
+        <div key={ad.id} className="card2 p-2 border border-gray-300 rounded-md shadow-sm">
+              {/* <div className="dates mb-2 flex space-x-4">
+                <p className="campaign-status1 text-sm font-semibold mb1">
+                  <strong>Date: </strong> {startDate}
+                </p>
+                <p className="campaign-status1 text-sm font-semibold mb1">TO</p>
+                <p className="campaign-status1 text-sm font-semibold mb1">{endDate}</p>
               </div>
-              <div className='icon-container'>
-              <i className='fas fa-mouse-pointer'></i>
+         */}
+              <p className="ad-title text-sm font-semibold mb-1"><strong>Campaign Name:</strong> {ad.name}</p>
+              <p className="campaign-name text-xs"><strong>Campaign ID:</strong> {ad.campaign_id}</p>
+              <p className="campaign-status text-xs"><strong>Status:</strong> {ad.status}</p>
+             
+              
+              <div className="insights max-h-40 overflow-auto border-t mt-2 pt-2">
+                <div className='gridmain'>
+                <div className="box">
+                  <div className='info-container'>
+                    <div className='text-section'>
+                  <p className="label text-xs font-medium">CLICKS</p>
+                  <p className="value text-xs">{clicks}</p>
+                    </div>
+                    <div className='icon-container'>
+              <FaMousePointer/>
+                    </div>
+                  </div>
+                </div>
+                <div className="box">
+                  <div className='info-container'>
+                    <div className='text-section'>
+                  <p className="label text-xs font-medium">CPC</p>
+                  <p className="value text-xs">{cpc}</p>
+                    </div>
+                    <div className='icon-container'>
+                   <FaInfoCircle/>
+                    </div>
+                  </div>
+                </div>
+                <div className="box">
+                  <div className='info-container'>
+                    <div className='text-section'>
+                  <p className="label text-xs font-medium">CTR</p>
+                  <p className="value text-xs">{ctr}</p>
+                    </div>
+                    <div className='icon-container'>
+                    <FaChartLine/>
+                    </div>
+                  </div>
+                </div>
+                <div className="box">
+                  <div className='info-container'>
+                    <div className='text-section'>
+                  <p className="label text-xs font-medium">IMPRESSIONS</p>
+                  <p className="value text-xs">{impressions}</p>
+                    </div>
+                    <div className='icon-container'>
+                    <FaEye/>
+                    </div>
+                  </div>
+                </div>
+                <div className="box">
+                  <div className='info-container'>
+                    <div className='text-section'>
+                  <p className="label text-xs font-medium">REACH</p>
+                  <p className="value text-xs">{reach}</p>
+                    </div>
+                    <div className='icon-container'>
+                    <FaUsers/>
+                    </div>
+                  
+                  </div>
+                </div>
+                <div className="box">
+                  <div className='info-container'>
+                    <div className='text-section'>
+                  <p className="label text-xs font-medium">SPEND</p>
+                  <p className="value text-xs">{spend}</p>
+                    </div>
+                    <div className='icon-container'>
+                  <FaDollarSign/>
+                    </div>
+                  </div>
+                </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="box">
-            <div className='info-container'>
-              <div className='text-section'>
-            <p className="label text-xs font-medium">CPC</p>
-            <p className="value text-xs">{cpc}</p>
-              </div>
-              <div className='icon-container'>
-              <i className='fas fa-info-circle'></i>
-              </div>
-            </div>
-          </div>
-          <div className="box">
-            <div className='info-container'>
-              <div className='text-section'>
-            <p className="label text-xs font-medium">CTR</p>
-            <p className="value text-xs">{ctr}</p>
-              </div>
-              <div className='icon-container'>
-              <i className='fas fa-chart-line'></i>
-              </div>
-            </div>
-          </div>
-          <div className="box">
-            <div className='info-container'>
-              <div className='text-section'>
-            <p className="label text-xs font-medium">IMPRESSIONS</p>
-            <p className="value text-xs">{impressions}</p>
-              </div>
-              <div className='icon-container'>
-              <i className='fas fa-eye'></i>
-              </div>
-            </div>
-          </div>
-          <div className="box">
-            <div className='info-container'>
-              <div className='text-section'>
-            <p className="label text-xs font-medium">REACH</p>
-            <p className="value text-xs">{reach}</p>
-              </div>
-              <div className='icon-container'>
-              <i className='fas fa-users'></i>
-              </div>
-            
-            </div>
-          </div>
-          <div className="box">
-            <div className='info-container'>
-              <div className='text-section'>
-            <p className="label text-xs font-medium">SPEND</p>
-            <p className="value text-xs">{spend}</p>
-              </div>
-              <div className='icon-container'>
-              <i className='fas fa-dollar-sign'></i>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
     );
 };
 
